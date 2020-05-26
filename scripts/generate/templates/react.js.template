@@ -1,0 +1,10 @@
+import React from 'react';
+import {renderReact, Text} from '@shopify/argo-checkout-private';
+
+renderReact('Checkout::PostPurchaseCrossSell::Render', (props) => (
+  <Offers {...props} />
+));
+
+const Offers = () => {
+  return <Text>Create your awesome offer page here.</Text>;
+};

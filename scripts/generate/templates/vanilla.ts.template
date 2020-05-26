@@ -1,0 +1,10 @@
+import React from 'react';
+import {extend, Text} from '@shopify/argo-checkout-private';
+
+extend('Checkout::PostPurchaseCrossSell::Render', (root, input) => {
+  const textElement = root.createComponent(Text);
+  textElement.appendChild('Create your awesome offer page here.');
+
+  root.appendChild(textElement as any);
+  root.mount();
+});
