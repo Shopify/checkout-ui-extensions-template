@@ -14,16 +14,16 @@ If you grabbed this template directly from github:
 ## With npm
 npm install
 
-npm run generate -- --type=CROSS_SELLS
+npm run generate -- --type=CHECKOUT_POST_PURCHASE
 
 ## With yarn
 yarn
 
-yarn generate --type=CROSS_SELLS
+yarn generate --type=CHECKOUT_POST_PURCHASE
 ```
 
 ### Available extensions:
- - CROSS_SELLS
+ - CHECKOUT_POST_PURCHASE
 
 **Note:**
 Once you're setup, you may delete the `scripts` folder as you will no longer need it.
