@@ -1,6 +1,5 @@
-import fs from 'fs';
-import path from 'path';
-import {updateWebpack} from './update-webpack';
+import * as fs from 'fs';
+import * as path from 'path';
 
 export enum Framework {
   Vanilla = 'vanilla',
@@ -9,33 +8,37 @@ export enum Framework {
   ReactTypescript = 'react-typescript',
 }
 
-const indexPaths = {
-  [Framework.Vanilla]: 'vanilla.js.template',
-  [Framework.React]: 'react.js.template',
-  [Framework.VanillaTypescript]: 'vanilla.ts.template',
-  [Framework.ReactTypescript]: 'react.tsx.template',
-};
+const CUSTOM_EXTENSIONS = new Map([
+  [Framework.VanillaTypescript, '.ts'],
+  [Framework.ReactTypescript, '.tsx'],
+]);
+
+const TEMPLATES = new Map([
+  [Framework.Vanilla, 'vanilla.template'],
+  [Framework.React, 'react.template'],
+  [Framework.VanillaTypescript, 'vanilla.template'],
+  [Framework.ReactTypescript, 'react.template'],
+]);
 
 export function generateSrc(framework: Framework) {
-  const indexPath = indexPaths[framework] || indexPaths[Framework.Vanilla];
-  const ext = indexPath.split('.')[1];
-
-  const file = fs.readFileSync(__dirname + `/templates/${indexPath}`);
-  const text = file.toString();
+  const extension = CUSTOM_EXTENSIONS.get(framework) || '.js';
+  const template = TEMPLATES.get(framework)!;
+  const templateSource = fs.readFileSync(
+    path.join(__dirname, 'templates', template),
+    'utf8'
+  );
 
   try {
-    const outDir = path.resolve(__dirname, '../../src');
-    if (!fs.existsSync(outDir)) {
-      fs.mkdirSync(outDir);
+    const outputDirectory = path.resolve(__dirname, '../../src');
+    if (!fs.existsSync(outputDirectory)) {
+      fs.mkdirSync(outputDirectory);
     }
 
-    const outPath = path.resolve(__dirname, `../../src/index.${ext}`);
-    fs.writeFileSync(outPath, text);
+    const outPath = path.join(outputDirectory, `index${extension}`);
+    fs.writeFileSync(outPath, templateSource);
 
-    console.log(`src/index.${ext} file was created.`);
+    console.log(`src/index${extension} file was created.`);
   } catch (error) {
-    console.error(`src/index.${ext} file could not be created: `, error);
+    console.error(`src/index${extension} file could not be created: `, error);
   }
-
-  updateWebpack(ext);
 }

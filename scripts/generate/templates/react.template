@@ -1,10 +1,10 @@
 import React from 'react';
-import {renderReact, Text} from '@shopify/argo-checkout-private';
+import {renderReact, Text} from '@shopify/argo-checkout-testing';
 
 renderReact('Checkout::PostPurchaseCrossSell::Render', (props) => (
-  <Offers {...props} />
+  <Extension {...props} />
 ));
 
-const Offers = () => {
+function Extension() {
   return <Text>Create your awesome offer page here.</Text>;
-};
+}
