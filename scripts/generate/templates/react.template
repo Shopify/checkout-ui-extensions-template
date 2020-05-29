@@ -1,7 +1,7 @@
 import React from 'react';
 import {renderReact, Text} from '@shopify/argo-checkout-testing';
 
-renderReact('Checkout::PostPurchaseCrossSell::Render', (props) => (
+renderReact('Checkout::PostPurchase::Render', (props) => (
   <Extension {...props} />
 ));
 
