@@ -1,6 +1,6 @@
 import {extend, Text} from '@shopify/argo-checkout-testing';
 
-extend('Checkout::PostPurchaseCrossSell::Render', (root, input) => {
+extend('Checkout::PostPurchase::Render', (root, input) => {
   const text = root.createComponent(Text);
   text.appendChild('Create your awesome offer page here.');
 
