@@ -1027,6 +1027,14 @@
     is-module "^1.0.0"
     resolve "^1.14.2"
 
+"@rollup/plugin-replace@^2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-replace/-/plugin-replace-2.3.2.tgz#da4e0939047f793c2eb5eedfd6c271232d0a033f"
+  integrity sha512-KEEL7V2tMNOsbAoNMKg91l1sNXBDoiP31GFlqXVOuV5691VQKzKBh91+OKKOG4uQWYqcFskcjFyh1d5YnZd0Zw==
+  dependencies:
+    "@rollup/pluginutils" "^3.0.8"
+    magic-string "^0.25.5"
+
 "@rollup/pluginutils@^3.0.8":
   version "3.0.10"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-3.0.10.tgz#a659b9025920378494cd8f8c59fbf9b3a50d5f12"
@@ -1585,10 +1593,10 @@ arg@^4.1.0:
   resolved "https://registry.yarnpkg.com/arg/-/arg-4.1.3.tgz#269fc7ad5b8e42cb63c896d5666017261c144089"
   integrity sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==
 
-argogogo-run@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/argogogo-run/-/argogogo-run-0.1.0.tgz#7160252471d3ac6f2091a192d5949b6439870d6c"
-  integrity sha512-czBtq30W034FTOuODYg3TWUBDfXdgz9TAQbhyh0C5qRlcRbnrvw8i1XpUv+S01C0TqxexWqCh1nVeCl+XY2lVQ==
+argogogo-run@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/argogogo-run/-/argogogo-run-0.2.2.tgz#9d9e098ed13444ffe8d5d1ae613d1275dd7ba08a"
+  integrity sha512-2V6T1Dc4jyt9kcLq7FBuHFuMmbAMbsfgZ0BQhglq+m7PSVHcbxni5ZBoIhGInQRat8Qpo/oF90L2X2JV5n96KQ==
   dependencies:
     "@babel/core" "^7.9.6"
     "@babel/plugin-proposal-class-properties" "^7.8.3"
@@ -1601,6 +1609,7 @@ argogogo-run@^0.1.0:
     "@rollup/plugin-babel" "^5.0.2"
     "@rollup/plugin-commonjs" "^12.0.0"
     "@rollup/plugin-node-resolve" "^8.0.0"
+    "@rollup/plugin-replace" "^2.3.2"
     "@shopify/argo-webpack-hot-client" "^0.0.2"
     babel-loader "^8.1.0"
     core-js "^3.0.0"
@@ -3623,7 +3632,7 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-magic-string@^0.25.2:
+magic-string@^0.25.2, magic-string@^0.25.5:
   version "0.25.7"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.25.7.tgz#3f497d6fd34c669c6798dcb821f2ef31f5445051"
   integrity sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==
