@@ -19,7 +19,7 @@
     "server": "argogogo-run serve"
   },
   "dependencies": {
-    "@shopify/argo-checkout-testing": "0.1.3",
+    "@shopify/argo-checkout-testing": "0.1.4",
     "react": "^16.13.0"
   }
 }
