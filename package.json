@@ -7,9 +7,9 @@
   "license": "MIT",
   "devDependencies": {
     "@types/yargs": "^15.0.5",
-    "argogogo-run": "^0.2.2",
+    "argogogo-run": "^0.2.5",
     "inquirer": "^7.1.0",
-    "ts-node": "^8.10.1",
+    "ts-node": "^8.10.2",
     "typescript": "^3.0.0",
     "yargs": "^15.3.1"
   },
@@ -19,7 +19,7 @@
     "server": "argogogo-run serve"
   },
   "dependencies": {
-    "@shopify/argo-checkout-testing": "latest",
+    "@shopify/argo-checkout-testing": "0.1.3",
     "react": "^16.13.0"
   }
 }
