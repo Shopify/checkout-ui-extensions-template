@@ -16,7 +16,7 @@
   "scripts": {
     "generate": "ts-node ./scripts/generate",
     "build": "argogogo-run build",
-    "server": "argogogo-run serve"
+    "server": "argogogo-run serve --port 39351"
   },
   "dependencies": {
     "@shopify/argo-checkout-testing": "0.1.4",
