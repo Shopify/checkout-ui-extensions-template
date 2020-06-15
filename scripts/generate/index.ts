@@ -32,7 +32,7 @@ See README.md for instructions.
 
   const {framework} = response;
 
-  console.log('✅ You selected:', framework)
+  console.log('✅ You selected:', framework);
 
   generateSrc(framework as Framework);
   cleanUp();
