@@ -8,8 +8,13 @@
   "devDependencies": {
     "@types/yargs": "^15.0.5",
     "argogogo-run": "^0.3.0",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "inquirer": "^7.1.0",
+    "prettier": "^2.0.5",
     "ts-node": "^8.10.2",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.0.0",
     "yargs": "^15.3.1"
   },

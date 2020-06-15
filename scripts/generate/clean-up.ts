@@ -17,7 +17,6 @@ export function cleanUp() {
   const newPackage = JSON.stringify(json, null, 2);
 
   exec(`rm -rf ${path.resolve(__dirname, '../../scripts')}`);
-  exec(`rm -rf ${path.resolve(__dirname, '../../.prettierrc')}`);
 
   try {
     fs.writeFileSync(packagePath, newPackage);
