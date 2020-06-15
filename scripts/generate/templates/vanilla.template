@@ -1,9 +1,0 @@
-import {extend, Text} from '@shopify/argo-checkout';
-
-extend('Checkout::PostPurchase::Render', (root, input) => {
-  const text = root.createComponent(Text);
-  text.appendChild('Create your awesome offer page here.');
-
-  root.appendChild(text);
-  root.mount();
-});
