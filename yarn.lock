@@ -976,41 +976,41 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@remote-ui/core@^0.0.28":
-  version "0.0.28"
-  resolved "https://registry.yarnpkg.com/@remote-ui/core/-/core-0.0.28.tgz#7ad03fa9b92e245b1ccc83cf26c75e85cbb3c387"
-  integrity sha512-4WycO0AtFZuvOYLtQYSUyhOix/McvEhahEhVYajdZuEdhe9RdNQEi1EfvA0T8MsgYwW82vVg0lUSisInQ77tNA==
+"@remote-ui/core@^0.0.30":
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/@remote-ui/core/-/core-0.0.30.tgz#d01fe2c2e2983f81344c13fc906312848bc9537b"
+  integrity sha512-4NajIZz1/ftBvPlKb+jA/OeZIAWBFq+wbHe3l9Mvf8DHg6AIQualCH+yMm2mhn3BxzjLmUV+I8kv7mYSRfI6rQ==
   dependencies:
-    "@remote-ui/rpc" "^0.0.10"
-    "@remote-ui/types" "^0.0.8"
+    "@remote-ui/rpc" "^0.0.11"
+    "@remote-ui/types" "^0.0.9"
 
-"@remote-ui/react@^0.0.39":
-  version "0.0.39"
-  resolved "https://registry.yarnpkg.com/@remote-ui/react/-/react-0.0.39.tgz#d8ea68cefb7379e24ab2007efa0f5414f8e053c7"
-  integrity sha512-u7jZBBDHq5NKl9qxmcm6hvjonTi++PSXXQlU4gON3Vb9AloOjQ96oQlaviXZmmK3cAH/MRKKR7lsvGA0wRFlWA==
+"@remote-ui/react@^0.0.41":
+  version "0.0.41"
+  resolved "https://registry.yarnpkg.com/@remote-ui/react/-/react-0.0.41.tgz#45c3287ddf8fa9b79fc98f4d535fd72c12f3cf2b"
+  integrity sha512-K8nYb+M+ZwkvTGrZTWlOSW1Pvy/fmDCEnmAAmGb3sy4hDfMpju78fjQBYx1xVK8KgTYjzrBTBMzNclmJ4Ev57A==
   dependencies:
-    "@remote-ui/core" "^0.0.28"
-    "@remote-ui/rpc" "^0.0.10"
-    "@remote-ui/web-workers" "^0.0.17"
+    "@remote-ui/core" "^0.0.30"
+    "@remote-ui/rpc" "^0.0.11"
+    "@remote-ui/web-workers" "^0.0.19"
     "@types/react" ">=16.8.0 <17.0.0"
     react-reconciler "^0.25.0"
 
-"@remote-ui/rpc@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@remote-ui/rpc/-/rpc-0.0.10.tgz#229d408760cb519ea9623cf4a8c57b685d0262b6"
-  integrity sha512-8steYZRFj12DXfmhmleTJwDbOvKUtGyPfI/RBn3cSW0kxE108+pnzYcQrXIOFCXcC+TNxBgKW7Si1Z0QbatpvQ==
+"@remote-ui/rpc@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@remote-ui/rpc/-/rpc-0.0.11.tgz#c38308365c57e33e2504761e8adad673b7a5c7f0"
+  integrity sha512-aokFyiL/UdY+p5/q7tbAUKOzbCv5srq0L/VFnCZbcmiJWpAkAoIlbHBEJy97nnrA6e0cY2cAAVAegsn1/ndeWQ==
 
-"@remote-ui/types@^0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@remote-ui/types/-/types-0.0.8.tgz#984e45c64a1ea0178e776f03d31cbd29c88da853"
-  integrity sha512-68MGy8mMfGA+gdekrQ69Yqr2QceZxruEbkJi7mV9ABCHGV4Lc9Y7cohFNWc3jV+NjzxQLFX0s+M4w1MAAVUclQ==
+"@remote-ui/types@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@remote-ui/types/-/types-0.0.9.tgz#0ea2107edb177a6f69b40e6f07085974b33fcf6c"
+  integrity sha512-r156ZQiStRL9CHp6s0liV0PPrInuxaWEDC4xsRySZkjfxdcgYvCFAqLFAd+ZY7zGDTfYro5StdD+LhamasaJZg==
 
-"@remote-ui/web-workers@^0.0.17":
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/@remote-ui/web-workers/-/web-workers-0.0.17.tgz#1847846df284fd8f53080f02d4a811cb222737f4"
-  integrity sha512-hEqIrD2YyIVwgh8cTpgX0t8a85hlUxwyIP0ZWTRu5Bgs433E/O358yliWGc2UdBoa5/qR/Vu0SrqCyowzcxBkQ==
+"@remote-ui/web-workers@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@remote-ui/web-workers/-/web-workers-0.0.19.tgz#f100ba3dde836f2e4e25157e9f18b26c9c1ab5b3"
+  integrity sha512-LiB082XMhUdRYq7FQkC2J3U8wc5BCBH/JtYwI7qDcyC0NiCm+yTXAmDAu1DBGDFbDQxSEUnC8yQmI+WldM0KAA==
   dependencies:
-    "@remote-ui/rpc" "^0.0.10"
+    "@remote-ui/rpc" "^0.0.11"
     "@sewing-kit/plugins" "^0.1.0"
     "@types/webpack" "^4.41.12"
     loader-utils "^2.0.0"
@@ -1107,21 +1107,50 @@
   resolved "https://registry.yarnpkg.com/@sewing-kit/webpack-plugin-hash-output/-/webpack-plugin-hash-output-0.0.2.tgz#a41ddef000619ac20e64513edbbfc6f28afe7905"
   integrity sha512-BF3gmC9YZf4VY5RLAc5qUbxft16O614jnTtGr8gPRbJF4y3Qz3AVSxSB8dJDldzk4AH9lTQvH0e1Wkbgp5tR8g==
 
-"@shopify/argo-checkout-testing@0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-testing/-/argo-checkout-testing-0.1.4.tgz#08f783c5e385da02c00cf7848e11ded10df9e4f8"
-  integrity sha512-aeYl7805DSks3xZ7XdZ7Vinu03xGjXrv3LbWM1YIUMoSQYZxjr60NiCVOjNN+QBHZG/b2hnTONKL9k2v0wO5oQ==
+"@shopify/argo-checkout@^0.1.0":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.1.5.tgz#d75874db8b539c4a87ad39a53bb09453b6e19144"
+  integrity sha512-ybinaXP1w7wWJYoGWiTjCkmmHAteDHMckW4GA0IQwGnCiat1ioWOLqa5BSzWo17SrODLAeEm0VddnIHF1RPKlg==
   dependencies:
-    "@remote-ui/core" "^0.0.28"
-    "@remote-ui/react" "^0.0.39"
+    "@remote-ui/core" "^0.0.30"
+    "@remote-ui/react" "^0.0.41"
     "@types/react" "^16.0.0"
   optionalDependencies:
     react ">=16.8.0 <17.0.0"
 
-"@shopify/argo-webpack-hot-client@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-webpack-hot-client/-/argo-webpack-hot-client-0.0.2.tgz#978ca3e8a98d8e60884e5ff2b91bf37f9944afcc"
-  integrity sha512-gdrE8pNcniC9TR3m4MfU+mkvVo90Mufm1BzekfslFo1/pQ04xKb53/I5q7+vJZf2KGtM4VxCqshm7wTBgr9Bew==
+"@shopify/argo-run@^0.1.0":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-run/-/argo-run-0.1.1.tgz#da529b7eb2da0bf3fe04f35a9b3a573650995dc9"
+  integrity sha512-tNzfKGdatDrG5tdcVhIZ/rXq536W+AyRxwBV8Ru2IiNInH+H8q8ERHQtZ7pKo4hyAMYLUg6ss+Zb9Nu2qPRpOA==
+  dependencies:
+    "@babel/core" "^7.9.6"
+    "@babel/plugin-proposal-class-properties" "^7.8.3"
+    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.8.3"
+    "@babel/plugin-proposal-numeric-separator" "^7.8.3"
+    "@babel/plugin-proposal-optional-chaining" "^7.9.0"
+    "@babel/preset-env" "^7.9.6"
+    "@babel/preset-react" "^7.9.4"
+    "@babel/preset-typescript" "^7.9.0"
+    "@shopify/argo-webpack-hot-client" "^0.1.0"
+    babel-loader "^8.1.0"
+    brotli-size "^4.0.0"
+    chalk "^4.0.0"
+    core-js "^3.0.0"
+    get-port "^5.1.1"
+    glob "^7.1.6"
+    gzip-size "^5.1.1"
+    koa "^2.11.0"
+    koa-webpack "^5.3.0"
+    open "^7.0.4"
+    pretty-bytes "^5.3.0"
+    regenerator-runtime "^0.13.5"
+    terser-webpack-plugin "^3.0.3"
+    webpack "^4.43.0"
+
+"@shopify/argo-webpack-hot-client@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-webpack-hot-client/-/argo-webpack-hot-client-0.1.0.tgz#ae0a1b1093b96babb8e5a96bb0bc9362b0790188"
+  integrity sha512-aPFSlfxShZxo+ktmHfyGvP+KfFotm6WiVDb71bohGv7uAH3ymZ8l0B+k6vKATiUeBO1Jlae0mO6exQCmmbdcow==
   dependencies:
     webpack "^4.43.0"
 
@@ -1572,35 +1601,6 @@ arg@^4.1.0:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/arg/-/arg-4.1.3.tgz#269fc7ad5b8e42cb63c896d5666017261c144089"
   integrity sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==
-
-argogogo-run@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/argogogo-run/-/argogogo-run-0.3.0.tgz#97ac19227d9c8a115e23e4d73eae250242a7e7b6"
-  integrity sha512-X5sa0vgbBibPyF36/ZBsmgOYaV2EA+DmNVyWSeIiIfFosLT123x5ZYYVWWAsTESywFAouZiKxqa4xtiV2BZktQ==
-  dependencies:
-    "@babel/core" "^7.9.6"
-    "@babel/plugin-proposal-class-properties" "^7.8.3"
-    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.8.3"
-    "@babel/plugin-proposal-numeric-separator" "^7.8.3"
-    "@babel/plugin-proposal-optional-chaining" "^7.9.0"
-    "@babel/preset-env" "^7.9.6"
-    "@babel/preset-react" "^7.9.4"
-    "@babel/preset-typescript" "^7.9.0"
-    "@shopify/argo-webpack-hot-client" "^0.0.2"
-    babel-loader "^8.1.0"
-    brotli-size "^4.0.0"
-    chalk "^4.0.0"
-    core-js "^3.0.0"
-    get-port "^5.1.1"
-    glob "^7.1.6"
-    gzip-size "^5.1.1"
-    koa "^2.11.0"
-    koa-webpack "^5.3.0"
-    open "^7.0.4"
-    pretty-bytes "^5.3.0"
-    regenerator-runtime "^0.13.5"
-    terser-webpack-plugin "^3.0.3"
-    webpack "^4.43.0"
 
 argparse@^1.0.7:
   version "1.0.10"
