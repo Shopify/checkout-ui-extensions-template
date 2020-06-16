@@ -59,7 +59,7 @@ renderReact('Checkout::PostPurchase::Render', (props) => (
 ));
 
 // Top-level React component
-function PostPurchaseExtension(
+const PostPurchaseExtension = (
   props: InputForRenderExtension<'Checkout::PostPurchase::Render'>
 ) => {
   const payload = props.storage.initialData as Payload;
@@ -69,4 +69,4 @@ function PostPurchaseExtension(
       {JSON.stringify(payload)}
     </Text>
   );
-}
+};
