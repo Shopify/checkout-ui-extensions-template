@@ -1,5 +1,5 @@
 import yargs from 'yargs';
-import {generateSrc, Framework} from './generate-src';
+import {generateSrc, Template} from './generate-src';
 import {cleanUp} from './clean-up';
 
 const inquirer = require('inquirer');
@@ -21,8 +21,8 @@ See README.md for instructions.
   const response = await inquirer.prompt([
     {
       type: 'list',
-      name: 'framework',
-      message: 'Select framework:',
+      name: 'template',
+      message: 'Select template:',
       min: 1,
       max: 1,
       instructions: false,
@@ -30,10 +30,10 @@ See README.md for instructions.
     },
   ]);
 
-  const {framework} = response;
+  const {template} = response;
 
-  console.log('✅ You selected:', framework);
+  console.log('✅ You selected:', template);
 
-  generateSrc(framework as Framework);
+  generateSrc(template as Template);
   cleanUp();
 })();

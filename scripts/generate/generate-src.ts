@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-export enum Framework {
+export enum Template {
   Vanilla = 'vanilla',
   React = 'react',
   VanillaTypescript = 'vanilla-typescript',
@@ -9,22 +9,22 @@ export enum Framework {
 }
 
 const CUSTOM_EXTENSIONS = new Map([
-  [Framework.VanillaTypescript, '.ts'],
-  [Framework.ReactTypescript, '.tsx'],
+  [Template.VanillaTypescript, '.ts'],
+  [Template.ReactTypescript, '.tsx'],
 ]);
 
 const TEMPLATES = new Map([
-  [Framework.Vanilla, 'vanilla.template'],
-  [Framework.React, 'react.template'],
-  [Framework.VanillaTypescript, 'vanilla.template'],
-  [Framework.ReactTypescript, 'react.template'],
+  [Template.Vanilla, 'vanilla.template'],
+  [Template.React, 'react.template'],
+  [Template.VanillaTypescript, 'vanilla.template'],
+  [Template.ReactTypescript, 'react.template'],
 ]);
 
-export function generateSrc(framework: Framework) {
-  const extension = CUSTOM_EXTENSIONS.get(framework) || '.js';
-  const template = TEMPLATES.get(framework)!;
+export function generateSrc(template: Template) {
+  const extension = CUSTOM_EXTENSIONS.get(template) || '.js';
+  const selectedTemplate = TEMPLATES.get(template)!;
   const templateSource = fs.readFileSync(
-    path.join(__dirname, 'templates', template),
+    path.join(__dirname, 'templates', selectedTemplate),
     'utf8'
   );
 
