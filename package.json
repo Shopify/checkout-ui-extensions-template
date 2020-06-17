@@ -1,6 +1,9 @@
 {
   "name": "argo-checkout-template",
   "version": "0.1.0",
+  "engines": {
+    "node": ">=10.16.0"
+  },
   "main": "extension.ts",
   "repository": "https://github.com/Shopify/argo-checkout-template.git",
   "author": "Shopify <app-extensions@shopify.com>",
