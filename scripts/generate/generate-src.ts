@@ -13,7 +13,6 @@ export enum Template {
 const CUSTOM_EXTENSIONS = new Map([
   [Template.VanillaTypescript, '.ts'],
   [Template.ReactTypescript, '.tsx'],
-  [Template.React, '.jsx'],
 ]);
 
 const TEMPLATES = new Map([
