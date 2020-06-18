@@ -1,9 +1,9 @@
 /**
- * Extend Shopify Checkout with a custom Post Purchase user experience
- * This Shopify Checkout template provides two extension points:
- *  1. Inquiry - Called first, during the payment step.
- *  2. Render - If requested by `Inquiry`, will be rendered after
- *     payment processing completes
+ * Extend Shopify Checkout with a custom Post Purchase user experience This
+ * Shopify Checkout template provides two extension points:
+ *  1. Inquiry - Called first, during the checkout process.
+ *  2. Render - If requested by `Inquiry`, will be rendered after checkout
+ *     completes
  */
 
 import React from 'react';
@@ -20,15 +20,16 @@ interface Payload {
 }
 
 /**
- * Entry point for the Inquiry Extension Point.
+ * Entry point for the `Inquiry` Extension Point.
  *
- * Returns a value indicating whether or not to render a PostPurchase step,
- * and optionally allows data to be stored on the client for use in the
- * `::Render` extension point.
+ * Returns a value indicating whether or not to render a PostPurchase step, and
+ * optionally allows data to be stored on the client for use in the `Render`
+ * extension point.
  */
 extend('Checkout::PostPurchase::Inquiry', async ({storage}) => {
   const {render, payload} = await doInquiry();
   if (render) {
+    // Saves payload data, provided to `Render` via `storage.inputData`
     await storage.update(payload);
   }
   return {
@@ -37,7 +38,7 @@ extend('Checkout::PostPurchase::Inquiry', async ({storage}) => {
 });
 
 // Simulate results of network call, etc.
-const doInquiry = async () => {
+async function doInquiry() {
   const payload: Payload = {
     couldBe: 'anything',
   };
@@ -45,23 +46,23 @@ const doInquiry = async () => {
     render: true,
     payload,
   };
-};
+}
 
 /**
- * Entry point for the Render Extension Point
+ * Entry point for the `Render` Extension Point
  *
- * Returns markup composed of remote-UI components.  The Render
- * extension can optionally make use of data stored during `::Inquiry` extension
- * point to expedite time-to-first-meaningful-paint.
+ * Returns markup composed of Argo components.  The Render extension can
+ * optionally make use of data stored during `Inquiry` extension point to
+ * expedite time-to-first-meaningful-paint.
  */
 renderReact('Checkout::PostPurchase::Render', (props) => (
   <PostPurchaseExtension {...props} />
 ));
 
 // Top-level React component
-const PostPurchaseExtension = (
+function PostPurchaseExtension(
   props: InputForRenderExtension<'Checkout::PostPurchase::Render'>
-) => {
+) {
   const payload = props.storage.initialData as Payload;
   return (
     <Text>
@@ -69,4 +70,4 @@ const PostPurchaseExtension = (
       {JSON.stringify(payload)}
     </Text>
   );
-};
+}
