@@ -23,7 +23,8 @@
   "scripts": {
     "generate": "ts-node ./scripts/generate",
     "build": "argo-run build",
-    "server": "argo-run serve --port 39351"
+    "server": "yarn start",
+    "start": "argo-run serve --port 39351"
   },
   "dependencies": {
     "@shopify/argo-checkout": "^0.1.0",
