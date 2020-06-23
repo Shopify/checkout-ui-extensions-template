@@ -9,10 +9,10 @@
 import React from 'react';
 import {
   extend,
-  renderReact,
-  InputForRenderExtension,
+  render,
   Text,
-} from '@shopify/argo-checkout';
+  InputForRenderExtension,
+} from '@shopify/argo-checkout-react';
 
 /** Define any shape or type of data */
 interface Payload {
@@ -55,7 +55,7 @@ async function doInquiry() {
  * optionally make use of data stored during `Inquiry` extension point to
  * expedite time-to-first-meaningful-paint.
  */
-renderReact('Checkout::PostPurchase::Render', (props) => (
+render('Checkout::PostPurchase::Render', (props) => (
   <PostPurchaseExtension {...props} />
 ));
 
