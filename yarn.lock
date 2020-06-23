@@ -955,41 +955,41 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@remote-ui/core@^0.0.30":
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/@remote-ui/core/-/core-0.0.30.tgz#d01fe2c2e2983f81344c13fc906312848bc9537b"
-  integrity sha512-4NajIZz1/ftBvPlKb+jA/OeZIAWBFq+wbHe3l9Mvf8DHg6AIQualCH+yMm2mhn3BxzjLmUV+I8kv7mYSRfI6rQ==
+"@remote-ui/core@^0.0.34":
+  version "0.0.34"
+  resolved "https://registry.yarnpkg.com/@remote-ui/core/-/core-0.0.34.tgz#a8e1e65c15c2ffcd0c62b59120f640f2272f79fd"
+  integrity sha512-euwZ28ALD7foMKPFkqhV2jE4PdU5QwfoTJxuoHB9L86udZ6ub4xKfEyb/7MEI2tqd7lZxpvWyLD8G2fF+ucpWQ==
   dependencies:
-    "@remote-ui/rpc" "^0.0.11"
-    "@remote-ui/types" "^0.0.9"
+    "@remote-ui/rpc" "^0.0.14"
+    "@remote-ui/types" "^0.0.10"
 
-"@remote-ui/react@^0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@remote-ui/react/-/react-0.0.41.tgz#45c3287ddf8fa9b79fc98f4d535fd72c12f3cf2b"
-  integrity sha512-K8nYb+M+ZwkvTGrZTWlOSW1Pvy/fmDCEnmAAmGb3sy4hDfMpju78fjQBYx1xVK8KgTYjzrBTBMzNclmJ4Ev57A==
+"@remote-ui/react@^0.0.45":
+  version "0.0.45"
+  resolved "https://registry.yarnpkg.com/@remote-ui/react/-/react-0.0.45.tgz#4200a197382242c5b71afde272aa982a8327bf80"
+  integrity sha512-zmt5yj+1p1rIoy5+KRep/5zdPGOzQtj4jlwTXNCUQfL2HROn68ISjM4eMcxzuRCQVybJ5dZmXvNR3dka3aD4eQ==
   dependencies:
-    "@remote-ui/core" "^0.0.30"
-    "@remote-ui/rpc" "^0.0.11"
-    "@remote-ui/web-workers" "^0.0.19"
+    "@remote-ui/core" "^0.0.34"
+    "@remote-ui/rpc" "^0.0.14"
+    "@remote-ui/web-workers" "^0.0.22"
     "@types/react" ">=16.8.0 <17.0.0"
     react-reconciler "^0.25.0"
 
-"@remote-ui/rpc@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@remote-ui/rpc/-/rpc-0.0.11.tgz#c38308365c57e33e2504761e8adad673b7a5c7f0"
-  integrity sha512-aokFyiL/UdY+p5/q7tbAUKOzbCv5srq0L/VFnCZbcmiJWpAkAoIlbHBEJy97nnrA6e0cY2cAAVAegsn1/ndeWQ==
+"@remote-ui/rpc@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@remote-ui/rpc/-/rpc-0.0.14.tgz#c2b8e64bd444bd9288714d39c8dc6a3cf691e4e1"
+  integrity sha512-oQitC22THLT1dkhTENV++MNMS8dGV9lKKOuLlcOar3EQLjdP8wTwscH63J/uQm10IYtuf8xZYDRErYg6nlLyAw==
 
-"@remote-ui/types@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@remote-ui/types/-/types-0.0.9.tgz#0ea2107edb177a6f69b40e6f07085974b33fcf6c"
-  integrity sha512-r156ZQiStRL9CHp6s0liV0PPrInuxaWEDC4xsRySZkjfxdcgYvCFAqLFAd+ZY7zGDTfYro5StdD+LhamasaJZg==
+"@remote-ui/types@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@remote-ui/types/-/types-0.0.10.tgz#f56ace1e82d39b4ea0898856271df8042a4fc732"
+  integrity sha512-lrGCIhjo0eET4vnlRRA0pjgmOTtjYP42pC6bt/lHjRqeFwCWoOHxRKTEOla0j+cPCvbYz2tyNak+S2wsqCRKiQ==
 
-"@remote-ui/web-workers@^0.0.19":
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/@remote-ui/web-workers/-/web-workers-0.0.19.tgz#f100ba3dde836f2e4e25157e9f18b26c9c1ab5b3"
-  integrity sha512-LiB082XMhUdRYq7FQkC2J3U8wc5BCBH/JtYwI7qDcyC0NiCm+yTXAmDAu1DBGDFbDQxSEUnC8yQmI+WldM0KAA==
+"@remote-ui/web-workers@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@remote-ui/web-workers/-/web-workers-0.0.22.tgz#2ff66d56ee63212e192ed00a4275b064ac37d8e6"
+  integrity sha512-ZAgLdajuZQ18VPrU2tXRAiEmHqmNXmHxdHlHuE08o2vlKP98PAUfNnQmpU0/7BejuhRRTLMSwL1QXBSY95Zeow==
   dependencies:
-    "@remote-ui/rpc" "^0.0.11"
+    "@remote-ui/rpc" "^0.0.14"
     "@sewing-kit/plugins" "^0.1.0"
     "@types/webpack" "^4.41.12"
     loader-utils "^2.0.0"
@@ -1087,20 +1087,20 @@
   integrity sha512-BF3gmC9YZf4VY5RLAc5qUbxft16O614jnTtGr8gPRbJF4y3Qz3AVSxSB8dJDldzk4AH9lTQvH0e1Wkbgp5tR8g==
 
 "@shopify/argo-checkout-react@^0.1.0":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-react/-/argo-checkout-react-0.1.2.tgz#c70dd93fd5d0a031b83568ab604905808cd713c8"
-  integrity sha512-63ZHibgNTs7ktnMbkn/95Ruy6ltgijnQnje1wHDv3SUX+rvvgZFQq4/Vw0kKJNdraRWHZpHgm1TRC2lk4wHZ8g==
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-react/-/argo-checkout-react-0.1.3.tgz#e635d831b504b9ecdb2de7830b2d834f48dcfa94"
+  integrity sha512-jZHxu+CP8YRon4obnmhU58Xa+jw47hNMzAOYTK7il5bw7Si32EJy2AglBgc7Cu639RrM5uNQOtiw5zKCv0OxXQ==
   dependencies:
-    "@remote-ui/react" "^0.0.41"
-    "@shopify/argo-checkout" "^0.1.10"
+    "@remote-ui/react" "^0.0.45"
+    "@shopify/argo-checkout" "^0.1.11"
     "@types/react" "^16.0.0"
 
-"@shopify/argo-checkout@^0.1.0", "@shopify/argo-checkout@^0.1.10":
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.1.10.tgz#875e62679e96d3506b81bcb3822dfcffc413d2ce"
-  integrity sha512-tX6ZqHp9o9+sOuxwiNGms0riM7C9uwRFw31cPu9ZNRCsKNKI7E23WR+SfTsKt8Ues3swdVoZKDxEBOr7F66YBg==
+"@shopify/argo-checkout@^0.1.0", "@shopify/argo-checkout@^0.1.11":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.1.11.tgz#958a9cefa6f11ed65ad5511d9f2b7037bb775a77"
+  integrity sha512-htIGBbkS3SU9QrEN/SUZCEhl/iPduGAb8gLX9LL4Pl7qYwZBKvrdh68a6SpGtIq5OAqwO4xcostNrWVqGAk3qg==
   dependencies:
-    "@remote-ui/core" "^0.0.30"
+    "@remote-ui/core" "^0.0.34"
 
 "@shopify/argo-run@^0.1.0":
   version "0.1.1"
@@ -1988,9 +1988,9 @@ camelcase@^5.0.0:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001043:
-  version "1.0.30001085"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001085.tgz#bed28bd51ff7425d33ee23e730c7f3b703711db6"
-  integrity sha512-x0YRFRE0pmOD90z+9Xk7jwO58p4feVNXP+U8kWV+Uo/HADyrgESlepzIkUqPgaXkpyceZU6siM1gsK7sHgplqA==
+  version "1.0.30001087"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001087.tgz#4a0bdc5998a114fcf8b7954e7ba6c2c29831c54a"
+  integrity sha512-KAQRGtt+eGCQBSp2iZTQibdCf9oe6cNTi5lmpsW38NnxP4WMYzfU6HCRmh4kJyh6LrTM9/uyElK4xcO93kafpg==
 
 capital-case@^1.0.3:
   version "1.0.3"
@@ -2544,9 +2544,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.413:
-  version "1.3.480"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.480.tgz#190ae45074578349a4c4f336fba29e76b20e9ef5"
-  integrity sha512-wnuUfQCBMAdzu5Xe+F4FjaRK+6ToG6WvwG72s8k/3E6b+hoGVYGiQE7JD1NhiCMcqF3+wV+c2vAnaLGRSSWVqA==
+  version "1.3.481"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.481.tgz#0d59e72a0aaeb876b43fb1d6e84bf0dfc99617e8"
+  integrity sha512-q2PeCP2PQXSYadDo9uNY+uHXjdB9PcsUpCVoGlY8TZOPHGlXdevlqW9PkKeqCxn2QBkGB8b6AcMO++gh8X82bA==
 
 elliptic@^6.0.0, elliptic@^6.5.2:
   version "6.5.3"
@@ -3540,9 +3540,9 @@ isobject@^3.0.0, isobject@^3.0.1:
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
 jest-worker@^26.0.0:
-  version "26.0.0"
-  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-26.0.0.tgz#4920c7714f0a96c6412464718d0c58a3df3fb066"
-  integrity sha512-pPaYa2+JnwmiZjK9x7p9BoZht+47ecFCDFA/CJxspHzeDvQcfVBLWzCiWyo+EGrSiQMWZtCFo9iSvMZnAAo8vw==
+  version "26.1.0"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-26.1.0.tgz#65d5641af74e08ccd561c240e7db61284f82f33d"
+  integrity sha512-Z9P5pZ6UC+kakMbNJn+tA2RdVdNX5WH1x+5UCBZ9MxIK24pjYtFt96fK+UwBTrjLYm232g1xz0L3eTh51OW+yQ==
   dependencies:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
