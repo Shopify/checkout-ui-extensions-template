@@ -28,8 +28,8 @@
     "start": "argo-run serve --port 39351"
   },
   "dependencies": {
-    "@shopify/argo-checkout": "^0.1.0",
-    "@shopify/argo-checkout-react": "^0.1.0",
+    "@shopify/argo-checkout": "^0.2.0",
+    "@shopify/argo-checkout-react": "^0.2.0",
     "react": "^16.13.0"
   }
 }

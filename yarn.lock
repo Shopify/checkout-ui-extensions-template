@@ -1086,19 +1086,19 @@
   resolved "https://registry.yarnpkg.com/@sewing-kit/webpack-plugin-hash-output/-/webpack-plugin-hash-output-0.0.2.tgz#a41ddef000619ac20e64513edbbfc6f28afe7905"
   integrity sha512-BF3gmC9YZf4VY5RLAc5qUbxft16O614jnTtGr8gPRbJF4y3Qz3AVSxSB8dJDldzk4AH9lTQvH0e1Wkbgp5tR8g==
 
-"@shopify/argo-checkout-react@^0.1.0":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-react/-/argo-checkout-react-0.1.3.tgz#e635d831b504b9ecdb2de7830b2d834f48dcfa94"
-  integrity sha512-jZHxu+CP8YRon4obnmhU58Xa+jw47hNMzAOYTK7il5bw7Si32EJy2AglBgc7Cu639RrM5uNQOtiw5zKCv0OxXQ==
+"@shopify/argo-checkout-react@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-react/-/argo-checkout-react-0.2.0.tgz#7c648898e86460f58ec73a26daedeeb62ba75864"
+  integrity sha512-9e0kBTHkcdtRr6q+hmoJAj1OQUQUW7qCt9+GeJco0Nm3QAALwps8ZN86QQrWZ5csi7tH2HxQf2u+Ftu/3cK4nA==
   dependencies:
     "@remote-ui/react" "^0.0.45"
-    "@shopify/argo-checkout" "^0.1.11"
+    "@shopify/argo-checkout" "^0.2.0"
     "@types/react" "^16.0.0"
 
-"@shopify/argo-checkout@^0.1.0", "@shopify/argo-checkout@^0.1.11":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.1.11.tgz#958a9cefa6f11ed65ad5511d9f2b7037bb775a77"
-  integrity sha512-htIGBbkS3SU9QrEN/SUZCEhl/iPduGAb8gLX9LL4Pl7qYwZBKvrdh68a6SpGtIq5OAqwO4xcostNrWVqGAk3qg==
+"@shopify/argo-checkout@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.2.0.tgz#5cdc37f603ce68f124308f6a640f1758756575f3"
+  integrity sha512-x//kSw7WBNY8cLWwvGwcxbfg1y4t9nawoHlE0uF5XgMbbZ5Bte6r/CuUjrpcAUtOoUQq4vWZUEUKCLAEZGrvlg==
   dependencies:
     "@remote-ui/core" "^0.0.34"
 
