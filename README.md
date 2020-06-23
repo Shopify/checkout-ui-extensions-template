@@ -10,7 +10,7 @@ Start developing your awesome extension in the `./src` folder.
 
 If you grabbed this template directly from github:
 
-#### npm
+### npm
 
 ```bash
 ## With npm
@@ -24,5 +24,6 @@ yarn
 yarn generate --type=CHECKOUT_POST_PURCHASE
 ```
 
-### Available extensions:
- - CHECKOUT_POST_PURCHASE
+### Available extensions
+
+- CHECKOUT_POST_PURCHASE
