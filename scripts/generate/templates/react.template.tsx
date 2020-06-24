@@ -11,8 +11,17 @@ import {
   extend,
   render,
   useExtensionInput,
+  BlockStack,
   Button,
+  CalloutBanner,
+  Heading,
+  HeadingGroup,
+  Image,
+  InlineStack,
+  Separator,
   Text,
+  TextBlock,
+  TextContainer,
 } from '@shopify/argo-checkout-react';
 
 /** Define any shape or type of data */
@@ -59,24 +68,72 @@ async function getRenderData() {
 render('Checkout::PostPurchase::Render', () => <App />);
 
 // Top-level React component
-function App() {
+export function App() {
   const {extensionPoint, storage} = useExtensionInput<
     'Checkout::PostPurchase::Render'
   >();
-  const initialState = storage.initialData;
+  const initialState = storage.initialData as InitialState;
   return (
-    <>
-      <Text>
-        Create your awesome post purchase page here. initialState=
-        {JSON.stringify(initialState)}
-      </Text>
-      <Button
-        onPress={() => {
-          console.log(`Extension point ${extensionPoint}`);
-        }}
+    <BlockStack>
+      <CalloutBanner
+        title={`The body of this page was rendered by ${extensionPoint}`}
       >
-        Log extension point to console
-      </Button>
-    </>
+        subtext
+      </CalloutBanner>
+      {/* InlineStack is a temporary to create columns.  A new layout component will be
+          available soon that provides responsive UI and more control over widths. */}
+      <InlineStack>
+        <BlockStack>
+          <Heading>Left Column</Heading>
+          <Image source="https://cdn.shopify.com/assets/images/logos/shopify-bag.png" />
+        </BlockStack>
+        <BlockStack alignment="leading">
+          <TextContainer>
+            <Heading>Right Column</Heading>
+            <HeadingGroup>
+              <Heading>My Post-Purchase Extension</Heading>
+              <TextBlock>
+                It could be a cross-sell extension, product review for past
+                purchases, request for more information from the buyer, or
+                anything else
+              </TextBlock>
+              <HeadingGroup>
+                <Heading>Description</Heading>
+                <TextBlock>
+                  This is a non-exhaustive example, demonstrating provided UI
+                  components
+                </TextBlock>
+                <Heading>initialState</Heading>
+                <TextBlock>{JSON.stringify(initialState)}</TextBlock>
+              </HeadingGroup>
+            </HeadingGroup>
+          </TextContainer>
+          <Button
+            onPress={() => {
+              console.log(`Extension point ${extensionPoint}`);
+            }}
+          >
+            Log extension point to console
+          </Button>
+        </BlockStack>
+      </InlineStack>
+      <Separator />
+      <TextContainer spacing="loose" alignment="center">
+        <TextBlock>
+          Bottom Text <Text emphasized>Stretches </Text>
+          across both columns. Bottom Text Stretches across both columns. Bottom
+          Text Stretches across both columns. Bottom Text Stretches across both
+          columns. Bottom Text Stretches across both columns. Bottom Text
+          Stretches across both columns.
+        </TextBlock>
+        <TextBlock>
+          In the <Text role="deletion">First</Text> Second Paragraph, Bottom
+          Text Stretches across both columns. Bottom Text Stretches across both
+          columns. Bottom Text Stretches across both columns. Bottom Text
+          Stretches across both columns. Bottom Text Stretches across both
+          columns. Bottom Text Stretches across both columns.
+        </TextBlock>
+      </TextContainer>
+    </BlockStack>
   );
 }
