@@ -955,48 +955,48 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@remote-ui/core@^0.0.34":
-  version "0.0.34"
-  resolved "https://registry.yarnpkg.com/@remote-ui/core/-/core-0.0.34.tgz#a8e1e65c15c2ffcd0c62b59120f640f2272f79fd"
-  integrity sha512-euwZ28ALD7foMKPFkqhV2jE4PdU5QwfoTJxuoHB9L86udZ6ub4xKfEyb/7MEI2tqd7lZxpvWyLD8G2fF+ucpWQ==
+"@remote-ui/core@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@remote-ui/core/-/core-1.2.0.tgz#13a684ed15caaf615c8cfe7a91ab64cbfbfef93c"
+  integrity sha512-9p5Ie8eH/N2R+Wf/2qz3x/K819u74lpOyQMjz/gIm26nrcYe/tdq1dPuNuRbDhn4nA8AR421I72vI9RoLVhtQA==
   dependencies:
-    "@remote-ui/rpc" "^0.0.14"
-    "@remote-ui/types" "^0.0.10"
+    "@remote-ui/rpc" "^1.0.2"
+    "@remote-ui/types" "^1.0.2"
 
-"@remote-ui/react@^0.0.45":
-  version "0.0.45"
-  resolved "https://registry.yarnpkg.com/@remote-ui/react/-/react-0.0.45.tgz#4200a197382242c5b71afde272aa982a8327bf80"
-  integrity sha512-zmt5yj+1p1rIoy5+KRep/5zdPGOzQtj4jlwTXNCUQfL2HROn68ISjM4eMcxzuRCQVybJ5dZmXvNR3dka3aD4eQ==
+"@remote-ui/react@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@remote-ui/react/-/react-1.0.4.tgz#5203faebd207c23bba3260df034f5115ea89b742"
+  integrity sha512-2hw1BxI+z6QjpOVZ6eu+HjtBlSmuN3O7Fg/kg/mTqFyszqumsd7yKdZqi9n1OfGW9UshswugC0AV3oq/dL2Z7w==
   dependencies:
-    "@remote-ui/core" "^0.0.34"
-    "@remote-ui/rpc" "^0.0.14"
-    "@remote-ui/web-workers" "^0.0.22"
+    "@remote-ui/core" "^1.2.0"
+    "@remote-ui/rpc" "^1.0.2"
+    "@remote-ui/web-workers" "^1.0.2"
     "@types/react" ">=16.8.0 <17.0.0"
     react-reconciler "^0.25.0"
 
-"@remote-ui/rpc@^0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@remote-ui/rpc/-/rpc-0.0.14.tgz#c2b8e64bd444bd9288714d39c8dc6a3cf691e4e1"
-  integrity sha512-oQitC22THLT1dkhTENV++MNMS8dGV9lKKOuLlcOar3EQLjdP8wTwscH63J/uQm10IYtuf8xZYDRErYg6nlLyAw==
+"@remote-ui/rpc@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@remote-ui/rpc/-/rpc-1.0.2.tgz#6cb3cc8af9913461e26d61877e9816899c18bd0e"
+  integrity sha512-Kanofch4d8brmzlkrDhFy7t3Fba4HyxcX0w7e3LIYbx7z7HHyFB5PDV41KwqwA4t/IaOz9Ufyl1krMWswkosVQ==
 
-"@remote-ui/types@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@remote-ui/types/-/types-0.0.10.tgz#f56ace1e82d39b4ea0898856271df8042a4fc732"
-  integrity sha512-lrGCIhjo0eET4vnlRRA0pjgmOTtjYP42pC6bt/lHjRqeFwCWoOHxRKTEOla0j+cPCvbYz2tyNak+S2wsqCRKiQ==
+"@remote-ui/types@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@remote-ui/types/-/types-1.0.2.tgz#856468e8fdf51a3ffced49412963b558d06b6c76"
+  integrity sha512-t2r6FaHTkU29Nx3EV20zl8kdBRxkp9otKmJhV3mM8big2H1DuL0BVzKLKRpN89pQCsT12D6ok7Cxq2pqAAo40w==
 
-"@remote-ui/web-workers@^0.0.22":
-  version "0.0.22"
-  resolved "https://registry.yarnpkg.com/@remote-ui/web-workers/-/web-workers-0.0.22.tgz#2ff66d56ee63212e192ed00a4275b064ac37d8e6"
-  integrity sha512-ZAgLdajuZQ18VPrU2tXRAiEmHqmNXmHxdHlHuE08o2vlKP98PAUfNnQmpU0/7BejuhRRTLMSwL1QXBSY95Zeow==
+"@remote-ui/web-workers@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@remote-ui/web-workers/-/web-workers-1.0.2.tgz#00525823ce8a0d32bb4894f6b1dc4b522548de7e"
+  integrity sha512-kSLsWLKw1oxizvGL41nCPFb3ZNBEwWeZjSw93wFTteo4ElWBWB+X/l8BGFytkEv5IcuFFRxOEs85IsQUKrJE7g==
   dependencies:
-    "@remote-ui/rpc" "^0.0.14"
+    "@remote-ui/rpc" "^1.0.2"
     "@sewing-kit/plugins" "^0.1.0"
     "@types/webpack" "^4.41.12"
     loader-utils "^2.0.0"
     webpack-virtual-modules "^0.2.2"
   optionalDependencies:
     "@babel/core" "^7.9.0"
-    "@sewing-kit/plugin-javascript" "^0.1.0"
+    "@sewing-kit/plugin-javascript" "^0.1.3"
     "@sewing-kit/plugin-webpack" "^0.1.0"
     webpack "^4.43.0"
 
@@ -1024,10 +1024,10 @@
     fs-extra "^9.0.0"
     glob "^7.1.6"
 
-"@sewing-kit/plugin-javascript@^0.1.0":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@sewing-kit/plugin-javascript/-/plugin-javascript-0.1.2.tgz#203027851b8d5d61033f3985bcc2c68b3ef757e4"
-  integrity sha512-ezVO7HWm/WOMRSKqaeFaaSEAENnyz6x1tzvs/KFZKas6alkWUjsaXeIcjtGEYuseXC+kTFQ75Hu+ncwsp0Ik3Q==
+"@sewing-kit/plugin-javascript@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@sewing-kit/plugin-javascript/-/plugin-javascript-0.1.3.tgz#ce8e0c54af032dbae2f3652649e8bed18b9cd4ec"
+  integrity sha512-bLBQeSmAs6IOrWRRCiUwE9ayqKr41BOvkHrm/y4GcnWYgB+NncjQ4kRFa5U1HnaM1MQ1W434hdqaJQ7b3tkaVQ==
   dependencies:
     "@babel/cli" "^7.8.4"
     "@babel/core" "^7.8.0"
@@ -1086,21 +1086,21 @@
   resolved "https://registry.yarnpkg.com/@sewing-kit/webpack-plugin-hash-output/-/webpack-plugin-hash-output-0.0.2.tgz#a41ddef000619ac20e64513edbbfc6f28afe7905"
   integrity sha512-BF3gmC9YZf4VY5RLAc5qUbxft16O614jnTtGr8gPRbJF4y3Qz3AVSxSB8dJDldzk4AH9lTQvH0e1Wkbgp5tR8g==
 
-"@shopify/argo-checkout-react@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-react/-/argo-checkout-react-0.2.0.tgz#7c648898e86460f58ec73a26daedeeb62ba75864"
-  integrity sha512-9e0kBTHkcdtRr6q+hmoJAj1OQUQUW7qCt9+GeJco0Nm3QAALwps8ZN86QQrWZ5csi7tH2HxQf2u+Ftu/3cK4nA==
+"@shopify/argo-checkout-react@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-react/-/argo-checkout-react-0.3.1.tgz#6bc52c4c2a9298096b014477a704eddd8aabf42a"
+  integrity sha512-ZjDrPuyHftGcEMp+NqhzrSxHiJbTaHQqEaKLvl3s2q2w1msOXQIV0Ci6Wgh8pP2clfS+GKb4ord9d0c3p+Y3zQ==
   dependencies:
-    "@remote-ui/react" "^0.0.45"
-    "@shopify/argo-checkout" "^0.2.0"
+    "@remote-ui/react" "^1.0.4"
+    "@shopify/argo-checkout" "^0.3.1"
     "@types/react" "^16.0.0"
 
-"@shopify/argo-checkout@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.2.0.tgz#5cdc37f603ce68f124308f6a640f1758756575f3"
-  integrity sha512-x//kSw7WBNY8cLWwvGwcxbfg1y4t9nawoHlE0uF5XgMbbZ5Bte6r/CuUjrpcAUtOoUQq4vWZUEUKCLAEZGrvlg==
+"@shopify/argo-checkout@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.3.1.tgz#6999ed5cb41bfc74bfad4f97a09347975c91ced8"
+  integrity sha512-a+k7cNXsNAe4qDOY6Gik6J8aibH+Je4ibvDYaXSxw5RlWiti6ScEDQBrzGaK5EzwHHehkx4mYjaG24UTNAnmgQ==
   dependencies:
-    "@remote-ui/core" "^0.0.34"
+    "@remote-ui/core" "^1.2.0"
 
 "@shopify/argo-run@^0.1.0":
   version "0.1.1"
