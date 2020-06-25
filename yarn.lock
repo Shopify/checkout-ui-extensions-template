@@ -1086,26 +1086,26 @@
   resolved "https://registry.yarnpkg.com/@sewing-kit/webpack-plugin-hash-output/-/webpack-plugin-hash-output-0.0.2.tgz#a41ddef000619ac20e64513edbbfc6f28afe7905"
   integrity sha512-BF3gmC9YZf4VY5RLAc5qUbxft16O614jnTtGr8gPRbJF4y3Qz3AVSxSB8dJDldzk4AH9lTQvH0e1Wkbgp5tR8g==
 
-"@shopify/argo-checkout-react@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-react/-/argo-checkout-react-0.3.2.tgz#32c357ae52531ebb718b88ed4ddceee2be2975a4"
-  integrity sha512-KIwq969B5zWznyvhehYCWcYyN0LJmwa+WQ51tnQobcKu0wATB2xzO7ZJvMZEgPyV6ypbSViNUBS1fbHA+FF8Iw==
+"@shopify/argo-checkout-react@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-react/-/argo-checkout-react-0.3.4.tgz#2eac9d11cc0661a6dc7d592229105d60f2de2fb9"
+  integrity sha512-6soc5QcZRHAn/o9usjP/V87/QclK1GqvwCtEtnukaW1djGfsxNoA8vGiNHNsfuWBG/+6/tBL9L7rgqQ5dPfgag==
   dependencies:
     "@remote-ui/react" "^1.0.5"
-    "@shopify/argo-checkout" "^0.3.2"
+    "@shopify/argo-checkout" "^0.3.4"
     "@types/react" "^16.0.0"
 
-"@shopify/argo-checkout@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.3.2.tgz#f5ed1a72d4bfb4188e7c768b4aa69e1fe4f1c2b8"
-  integrity sha512-KbjC+DJ3OEnoGbf26hO2ALNduklWU0H54y3SpXmr8SDSXz1MKp3nysUT1jUhEb7iXruvwonm1sws0ayBAtz9Iw==
+"@shopify/argo-checkout@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.3.4.tgz#55ba0c4aa5837f1fb72498af3184362e8d07862b"
+  integrity sha512-SXbu1GqEcjNLEN7tvANO47zRMlaK9Hka/NhY6v3MGzVYt1RTFkudM/UdomgHip8ZRi/PAOW4tRg33eAXqfTP0A==
   dependencies:
     "@remote-ui/core" "^1.2.1"
 
-"@shopify/argo-run@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-run/-/argo-run-0.1.3.tgz#be758adefae9ba32f362a6415ac01d90047f5b13"
-  integrity sha512-kmvmhMVFQhwgfvdTcYNo0alYtAk5YNfM8enWPtz5CPyR/HM4OrKLwkSte79yqNpqWGAjCmNJOk5BVR92TbfjzA==
+"@shopify/argo-run@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-run/-/argo-run-0.1.4.tgz#5fcf0b2803b70d14d5b800b74ce09c50964439fd"
+  integrity sha512-xH2+FNSbm7z4NUqXsllstcrpqZX2pqw3BmV7j9IfV2ERF6P7HhcYONzuLdyykoX1QVhMcrNadSpQrsfGepOsmQ==
   dependencies:
     "@babel/core" "^7.9.6"
     "@babel/plugin-proposal-class-properties" "^7.8.3"
