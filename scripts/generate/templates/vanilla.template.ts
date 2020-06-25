@@ -6,10 +6,10 @@
  *     completes
  */
 
-import {extend, Text} from '@shopify/argo-checkout';
+import {extend, Button, Text} from '@shopify/argo-checkout';
 
 /** Define any shape or type of data */
-interface Payload {
+interface InitialState {
   couldBe: 'anything' | 'everything';
 }
 
@@ -21,10 +21,10 @@ interface Payload {
  * extension point.
  */
 extend('Checkout::PostPurchase::ShouldRender', async ({storage}) => {
-  const {render, payload} = await getRenderData();
+  const {render, initialState} = await getRenderData();
   if (render) {
-    // Saves payload data, provided to `Render` via `storage.inputData`
-    await storage.update(payload);
+    // Saves payload data, provided to `Render` via `storage.initialData`
+    await storage.update(initialState);
   }
   return {
     render,
@@ -33,12 +33,12 @@ extend('Checkout::PostPurchase::ShouldRender', async ({storage}) => {
 
 // Simulate results of network call, etc.
 async function getRenderData() {
-  const payload: Payload = {
+  const initialState: InitialState = {
     couldBe: 'anything',
   };
   return {
     render: true,
-    payload,
+    initialState,
   };
 }
 
@@ -49,15 +49,23 @@ async function getRenderData() {
  * optionally make use of data stored during `ShouldRender` extension point to
  * expedite time-to-first-meaningful-paint.
  */
-extend('Checkout::PostPurchase::Render', (root, input) => {
-  const payload = input.storage.initialData as Payload;
+extend('Checkout::PostPurchase::Render', (root, {extensionPoint, storage}) => {
+  const initialState = storage.initialData as InitialState;
   const text = root.createComponent(Text);
   text.appendChild(
-    `Create your awesome offer page here.  ShouldRender payload=${JSON.stringify(
-      payload
+    `Create your awesome post purchase page here. initialState=${JSON.stringify(
+      initialState
     )}`
   );
-
   root.appendChild(text);
+
+  const button = root.createComponent(Button, {
+    onPress: () => {
+      console.log(`Extension point ` + extensionPoint);
+    },
+  });
+  button.appendChild('Log extension point to console');
+  root.appendChild(button);
+
   root.mount();
 });

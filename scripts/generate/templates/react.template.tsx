@@ -10,12 +10,13 @@ import React from 'react';
 import {
   extend,
   render,
+  useExtensionInput,
+  Button,
   Text,
-  InputForRenderExtension,
 } from '@shopify/argo-checkout-react';
 
 /** Define any shape or type of data */
-interface Payload {
+interface InitialState {
   couldBe: 'anything' | 'everything';
 }
 
@@ -27,10 +28,10 @@ interface Payload {
  * extension point.
  */
 extend('Checkout::PostPurchase::ShouldRender', async ({storage}) => {
-  const {render, payload} = await getRenderData();
+  const {render, initialState} = await getRenderData();
   if (render) {
-    // Saves payload data, provided to `Render` via `storage.inputData`
-    await storage.update(payload);
+    // Saves initial state, provided to `Render` via `storage.initialData`
+    await storage.update(initialState);
   }
   return {
     render,
@@ -39,12 +40,12 @@ extend('Checkout::PostPurchase::ShouldRender', async ({storage}) => {
 
 // Simulate results of network call, etc.
 async function getRenderData() {
-  const payload: Payload = {
+  const initialState: InitialState = {
     couldBe: 'anything',
   };
   return {
     render: true,
-    payload,
+    initialState,
   };
 }
 
@@ -55,19 +56,27 @@ async function getRenderData() {
  * optionally make use of data stored during `ShouldRender` extension point to
  * expedite time-to-first-meaningful-paint.
  */
-render('Checkout::PostPurchase::Render', (props) => (
-  <PostPurchaseExtension {...props} />
-));
+render('Checkout::PostPurchase::Render', () => <App />);
 
 // Top-level React component
-function PostPurchaseExtension(
-  props: InputForRenderExtension<'Checkout::PostPurchase::Render'>
-) {
-  const payload = props.storage.initialData as Payload;
+function App() {
+  const {extensionPoint, storage} = useExtensionInput<
+    'Checkout::PostPurchase::Render'
+  >();
+  const initialState = storage.initialData;
   return (
-    <Text>
-      Create your awesome post purchase page here. ShouldRender payload=
-      {JSON.stringify(payload)}
-    </Text>
+    <>
+      <Text>
+        Create your awesome post purchase page here. initialState=
+        {JSON.stringify(initialState)}
+      </Text>
+      <Button
+        onPress={() => {
+          console.log(`Extension point ${extensionPoint}`);
+        }}
+      >
+        Log extension point to console
+      </Button>
+    </>
   );
 }
