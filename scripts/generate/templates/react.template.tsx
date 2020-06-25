@@ -1,8 +1,8 @@
 /**
  * Extend Shopify Checkout with a custom Post Purchase user experience This
  * Shopify Checkout template provides two extension points:
- *  1. Inquiry - Called first, during the checkout process.
- *  2. Render - If requested by `Inquiry`, will be rendered after checkout
+ *  1. ShouldRender - Called first, during the checkout process.
+ *  2. Render - If requested by `ShouldRender`, will be rendered after checkout
  *     completes
  */
 
@@ -20,14 +20,14 @@ interface Payload {
 }
 
 /**
- * Entry point for the `Inquiry` Extension Point.
+ * Entry point for the `ShouldRender` Extension Point.
  *
  * Returns a value indicating whether or not to render a PostPurchase step, and
  * optionally allows data to be stored on the client for use in the `Render`
  * extension point.
  */
-extend('Checkout::PostPurchase::Inquiry', async ({storage}) => {
-  const {render, payload} = await doInquiry();
+extend('Checkout::PostPurchase::ShouldRender', async ({storage}) => {
+  const {render, payload} = await getRenderData();
   if (render) {
     // Saves payload data, provided to `Render` via `storage.inputData`
     await storage.update(payload);
@@ -38,7 +38,7 @@ extend('Checkout::PostPurchase::Inquiry', async ({storage}) => {
 });
 
 // Simulate results of network call, etc.
-async function doInquiry() {
+async function getRenderData() {
   const payload: Payload = {
     couldBe: 'anything',
   };
@@ -52,7 +52,7 @@ async function doInquiry() {
  * Entry point for the `Render` Extension Point
  *
  * Returns markup composed of Argo components.  The Render extension can
- * optionally make use of data stored during `Inquiry` extension point to
+ * optionally make use of data stored during `ShouldRender` extension point to
  * expedite time-to-first-meaningful-paint.
  */
 render('Checkout::PostPurchase::Render', (props) => (
@@ -66,7 +66,7 @@ function PostPurchaseExtension(
   const payload = props.storage.initialData as Payload;
   return (
     <Text>
-      Create your awesome post purchase page here. Inquiry payload=
+      Create your awesome post purchase page here. ShouldRender payload=
       {JSON.stringify(payload)}
     </Text>
   );
