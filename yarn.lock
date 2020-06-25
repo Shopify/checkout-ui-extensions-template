@@ -955,20 +955,20 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@remote-ui/core@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@remote-ui/core/-/core-1.2.0.tgz#13a684ed15caaf615c8cfe7a91ab64cbfbfef93c"
-  integrity sha512-9p5Ie8eH/N2R+Wf/2qz3x/K819u74lpOyQMjz/gIm26nrcYe/tdq1dPuNuRbDhn4nA8AR421I72vI9RoLVhtQA==
+"@remote-ui/core@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@remote-ui/core/-/core-1.2.1.tgz#576a9a3d6e4a63454486c0bc9d72351416e02c83"
+  integrity sha512-79338WYAxp2oCGTDLwmnKiPMGF2A+gY6dICrH4PXW0ftpy9r5tcTaqEx9M0pk6Jq4qxjwWA8Vg8m2r3/IC9COw==
   dependencies:
     "@remote-ui/rpc" "^1.0.2"
     "@remote-ui/types" "^1.0.2"
 
-"@remote-ui/react@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@remote-ui/react/-/react-1.0.4.tgz#5203faebd207c23bba3260df034f5115ea89b742"
-  integrity sha512-2hw1BxI+z6QjpOVZ6eu+HjtBlSmuN3O7Fg/kg/mTqFyszqumsd7yKdZqi9n1OfGW9UshswugC0AV3oq/dL2Z7w==
+"@remote-ui/react@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@remote-ui/react/-/react-1.0.5.tgz#84a72f43d540987e90099315d850bf5dfecee724"
+  integrity sha512-Clv1w2j3OVt0KIlZJpy0YPkcKbZn9fvHEjmQ4Jvf8TjE/K2Hz+KDQppDVYq1VTTwXpDc4WG6vC0rRrqiHqroEQ==
   dependencies:
-    "@remote-ui/core" "^1.2.0"
+    "@remote-ui/core" "^1.2.1"
     "@remote-ui/rpc" "^1.0.2"
     "@remote-ui/web-workers" "^1.0.2"
     "@types/react" ">=16.8.0 <17.0.0"
@@ -1086,26 +1086,26 @@
   resolved "https://registry.yarnpkg.com/@sewing-kit/webpack-plugin-hash-output/-/webpack-plugin-hash-output-0.0.2.tgz#a41ddef000619ac20e64513edbbfc6f28afe7905"
   integrity sha512-BF3gmC9YZf4VY5RLAc5qUbxft16O614jnTtGr8gPRbJF4y3Qz3AVSxSB8dJDldzk4AH9lTQvH0e1Wkbgp5tR8g==
 
-"@shopify/argo-checkout-react@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-react/-/argo-checkout-react-0.3.1.tgz#6bc52c4c2a9298096b014477a704eddd8aabf42a"
-  integrity sha512-ZjDrPuyHftGcEMp+NqhzrSxHiJbTaHQqEaKLvl3s2q2w1msOXQIV0Ci6Wgh8pP2clfS+GKb4ord9d0c3p+Y3zQ==
+"@shopify/argo-checkout-react@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-react/-/argo-checkout-react-0.3.2.tgz#32c357ae52531ebb718b88ed4ddceee2be2975a4"
+  integrity sha512-KIwq969B5zWznyvhehYCWcYyN0LJmwa+WQ51tnQobcKu0wATB2xzO7ZJvMZEgPyV6ypbSViNUBS1fbHA+FF8Iw==
   dependencies:
-    "@remote-ui/react" "^1.0.4"
-    "@shopify/argo-checkout" "^0.3.1"
+    "@remote-ui/react" "^1.0.5"
+    "@shopify/argo-checkout" "^0.3.2"
     "@types/react" "^16.0.0"
 
-"@shopify/argo-checkout@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.3.1.tgz#6999ed5cb41bfc74bfad4f97a09347975c91ced8"
-  integrity sha512-a+k7cNXsNAe4qDOY6Gik6J8aibH+Je4ibvDYaXSxw5RlWiti6ScEDQBrzGaK5EzwHHehkx4mYjaG24UTNAnmgQ==
+"@shopify/argo-checkout@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.3.2.tgz#f5ed1a72d4bfb4188e7c768b4aa69e1fe4f1c2b8"
+  integrity sha512-KbjC+DJ3OEnoGbf26hO2ALNduklWU0H54y3SpXmr8SDSXz1MKp3nysUT1jUhEb7iXruvwonm1sws0ayBAtz9Iw==
   dependencies:
-    "@remote-ui/core" "^1.2.0"
+    "@remote-ui/core" "^1.2.1"
 
-"@shopify/argo-run@^0.1.0":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-run/-/argo-run-0.1.1.tgz#da529b7eb2da0bf3fe04f35a9b3a573650995dc9"
-  integrity sha512-tNzfKGdatDrG5tdcVhIZ/rXq536W+AyRxwBV8Ru2IiNInH+H8q8ERHQtZ7pKo4hyAMYLUg6ss+Zb9Nu2qPRpOA==
+"@shopify/argo-run@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-run/-/argo-run-0.1.3.tgz#be758adefae9ba32f362a6415ac01d90047f5b13"
+  integrity sha512-kmvmhMVFQhwgfvdTcYNo0alYtAk5YNfM8enWPtz5CPyR/HM4OrKLwkSte79yqNpqWGAjCmNJOk5BVR92TbfjzA==
   dependencies:
     "@babel/core" "^7.9.6"
     "@babel/plugin-proposal-class-properties" "^7.8.3"
@@ -1115,7 +1115,7 @@
     "@babel/preset-env" "^7.9.6"
     "@babel/preset-react" "^7.9.4"
     "@babel/preset-typescript" "^7.9.0"
-    "@shopify/argo-webpack-hot-client" "^0.1.0"
+    "@shopify/argo-webpack-hot-client" "^0.1.1"
     babel-loader "^8.1.0"
     brotli-size "^4.0.0"
     chalk "^4.0.0"
@@ -1131,10 +1131,10 @@
     terser-webpack-plugin "^3.0.3"
     webpack "^4.43.0"
 
-"@shopify/argo-webpack-hot-client@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-webpack-hot-client/-/argo-webpack-hot-client-0.1.0.tgz#ae0a1b1093b96babb8e5a96bb0bc9362b0790188"
-  integrity sha512-aPFSlfxShZxo+ktmHfyGvP+KfFotm6WiVDb71bohGv7uAH3ymZ8l0B+k6vKATiUeBO1Jlae0mO6exQCmmbdcow==
+"@shopify/argo-webpack-hot-client@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-webpack-hot-client/-/argo-webpack-hot-client-0.1.1.tgz#746618ca24152db8958b2eb8bcdfd1950a66d50c"
+  integrity sha512-0r10UdCv38o/oJ7wRrv66KC0L1XeZXkiyJk336Jp3Z6TVEMkMnXRmJQy+WyQyPA/ZghtSN0DmPAh7DWkceUWpg==
   dependencies:
     webpack "^4.43.0"
 
