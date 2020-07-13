@@ -60,12 +60,13 @@ function transpile(Template: Template) {
       jsx: ts.JsxEmit.Preserve,
     },
   });
-  const options = prettier.resolveConfig.sync('.')!;
+  const options = prettier.resolveConfig.sync('.');
   return prettier.format(output.outputText, {...options, parser: 'typescript'});
 }
 
 function readTemplate(Template: Template) {
   return fs.readFileSync(
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     path.join(__dirname, 'templates', TEMPLATES.get(Template)!),
     'utf8'
   );

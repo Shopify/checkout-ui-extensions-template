@@ -2,6 +2,7 @@ import yargs from 'yargs';
 import {generateSrc, Template} from './generate-src';
 import {cleanUp} from './clean-up';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const inquirer = require('inquirer');
 
 (async () => {

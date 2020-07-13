@@ -11,9 +11,12 @@
     "@shopify/argo-run": "^0.1.4",
     "@types/prettier": "^2.0.1",
     "@types/yargs": "^15.0.5",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
     "inquirer": "^7.1.0",
     "prettier": "^2.0.5",
     "ts-node": "^8.10.2",
@@ -24,7 +27,8 @@
     "generate": "ts-node ./scripts/generate",
     "build": "argo-run build",
     "server": "yarn start",
-    "start": "argo-run serve --port 39351"
+    "start": "argo-run serve --port 39351",
+    "lint": "eslint 'src/**'"
   },
   "dependencies": {
     "@shopify/argo-checkout": "^0.3.4",
