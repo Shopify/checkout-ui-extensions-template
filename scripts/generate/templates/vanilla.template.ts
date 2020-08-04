@@ -13,7 +13,7 @@ import {
   Heading,
   HeadingGroup,
   Image,
-  InlineStack,
+  Layout,
   Separator,
   Text,
   TextBlock,
@@ -74,70 +74,86 @@ extend('Checkout::PostPurchase::Render', (root, {extensionPoint, storage}) => {
         },
         'subtext'
       ),
-      /* InlineStack is a temporary to create columns.  A new layout component will be
-         available soon that provides responsive UI and more control over widths. */
-      root.createComponent(InlineStack, {}, [
-        root.createComponent(BlockStack, {}, [
-          root.createComponent(Heading, {}, 'Left Column'),
-          root.createComponent(Image, {
-            source:
-              'https://cdn.shopify.com/assets/images/logos/shopify-bag.png',
-          }),
-        ]),
-        root.createComponent(BlockStack, {}, [
-          root.createComponent(TextContainer, {}, [
-            root.createComponent(Heading, {}, 'Right Column'),
-            root.createComponent(HeadingGroup, {}, [
-              root.createComponent(Heading, {}, 'My Post-Purchase Extension'),
-              root.createComponent(
-                TextBlock,
-                {},
-                'It could be a cross-sell extension, product review for past purchases, request for more information from the buyer, or anything else'
-              ),
+      /* <Layout />
+       * `500` represents `500px`
+       * `0.5` represents `50%`
+       * `1` represents `100%` */
+      root.createComponent(
+        Layout,
+        {
+          media: [
+            {viewportSize: 'small', sizes: [1, 1], maxInlineSize: 0.95},
+            {viewportSize: 'medium', sizes: [300, 0.5], maxInlineSize: 0.95},
+            {viewportSize: 'large', sizes: [300, 0.3], maxInlineSize: 0.95},
+          ],
+        },
+        [
+          root.createComponent(BlockStack, {}, [
+            root.createComponent(Heading, {}, 'Left Column'),
+            root.createComponent(Image, {
+              source:
+                'https://cdn.shopify.com/assets/images/logos/shopify-bag.png',
+            }),
+          ]),
+          root.createComponent(BlockStack, {}, [
+            root.createComponent(TextContainer, {}, [
+              root.createComponent(Heading, {}, 'Right Column'),
               root.createComponent(HeadingGroup, {}, [
-                root.createComponent(Heading, {}, 'Description'),
+                root.createComponent(Heading, {}, 'My Post-Purchase Extension'),
                 root.createComponent(
                   TextBlock,
                   {},
-                  'This is a non-exhaustive example, demonstrating provided UI components'
+                  'It could be a cross-sell extension, product review for past purchases, request for more information from the buyer, or anything else'
                 ),
-                root.createComponent(Heading, {}, 'initialState'),
-                root.createComponent(
-                  TextBlock,
-                  {},
-                  JSON.stringify(initialState)
-                ),
+                root.createComponent(HeadingGroup, {}, [
+                  root.createComponent(Heading, {}, 'Description'),
+                  root.createComponent(
+                    TextBlock,
+                    {},
+                    'This is a non-exhaustive example, demonstrating provided UI components'
+                  ),
+                  root.createComponent(Heading, {}, 'initialState'),
+                  root.createComponent(
+                    TextBlock,
+                    {},
+                    JSON.stringify(initialState)
+                  ),
+                ]),
               ]),
             ]),
-          ]),
-          root.createComponent(
-            Button,
-            {
-              onPress: () => {
-                console.log(`Extension point ${extensionPoint}`);
+            root.createComponent(
+              Button,
+              {
+                onPress: () => {
+                  console.log(`Extension point ${extensionPoint}`);
+                },
               },
-            },
-            'Log extension point to console'
-          ),
-        ]),
-      ]),
-      root.createComponent(Separator),
-      root.createComponent(
-        TextContainer,
-        {spacing: 'loose', alignment: 'center'},
-        [
-          root.createComponent(TextBlock, {}, [
-            'Bottom Text ',
-            root.createComponent(Text, {emphasized: true}, 'Stretches'),
-            ' across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns.',
-          ]),
-          root.createComponent(TextBlock, {}, [
-            'In the ',
-            root.createComponent(Text, {role: 'deletion'}, 'First'),
-            ' Second Paragraph, Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns.',
+              'Log extension point to console'
+            ),
           ]),
         ]
       ),
+      root.createComponent(Layout, {maxInlineSize: 0.8}, [
+        root.createComponent(BlockStack, {}, [
+          root.createComponent(Separator),
+          root.createComponent(
+            TextContainer,
+            {spacing: 'loose', alignment: 'center'},
+            [
+              root.createComponent(TextBlock, {}, [
+                'Bottom Text ',
+                root.createComponent(Text, {emphasized: true}, 'Stretches'),
+                ' across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns.',
+              ]),
+              root.createComponent(TextBlock, {}, [
+                'In the ',
+                root.createComponent(Text, {role: 'deletion'}, 'First'),
+                ' Second Paragraph, Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns.',
+              ]),
+            ]
+          ),
+        ]),
+      ]),
     ])
   );
 
