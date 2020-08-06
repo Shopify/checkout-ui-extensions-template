@@ -17,7 +17,7 @@ import {
   Heading,
   HeadingGroup,
   Image,
-  InlineStack,
+  Layout,
   Separator,
   Text,
   TextBlock,
@@ -80,9 +80,17 @@ export function App() {
       >
         subtext
       </CalloutBanner>
-      {/* InlineStack is a temporary to create columns.  A new layout component will be
-          available soon that provides responsive UI and more control over widths. */}
-      <InlineStack>
+      {/* <Layout />
+       * `500` represents `500px`
+       * `0.5` represents `50%`
+       * `1` represents `100%` */}
+      <Layout
+        media={[
+          {viewportSize: 'small', sizes: [1, 1], maxInlineSize: 0.95},
+          {viewportSize: 'medium', sizes: [300, 0.5], maxInlineSize: 0.95},
+          {viewportSize: 'large', sizes: [300, 0.3], maxInlineSize: 0.95},
+        ]}
+      >
         <BlockStack>
           <Heading>Left Column</Heading>
           <Image source="https://cdn.shopify.com/assets/images/logos/shopify-bag.png" />
@@ -116,24 +124,28 @@ export function App() {
             Log extension point to console
           </Button>
         </BlockStack>
-      </InlineStack>
-      <Separator />
-      <TextContainer spacing="loose" alignment="center">
-        <TextBlock>
-          Bottom Text <Text emphasized>Stretches </Text>
-          across both columns. Bottom Text Stretches across both columns. Bottom
-          Text Stretches across both columns. Bottom Text Stretches across both
-          columns. Bottom Text Stretches across both columns. Bottom Text
-          Stretches across both columns.
-        </TextBlock>
-        <TextBlock>
-          In the <Text role="deletion">First</Text> Second Paragraph, Bottom
-          Text Stretches across both columns. Bottom Text Stretches across both
-          columns. Bottom Text Stretches across both columns. Bottom Text
-          Stretches across both columns. Bottom Text Stretches across both
-          columns. Bottom Text Stretches across both columns.
-        </TextBlock>
-      </TextContainer>
+      </Layout>
+      <Layout maxInlineSize={0.8}>
+        <BlockStack>
+          <Separator />
+          <TextContainer spacing="loose" alignment="center">
+            <TextBlock>
+              Bottom Text <Text emphasized>Stretches </Text>
+              across both columns. Bottom Text Stretches across both columns.
+              Bottom Text Stretches across both columns. Bottom Text Stretches
+              across both columns. Bottom Text Stretches across both columns.
+              Bottom Text Stretches across both columns.
+            </TextBlock>
+            <TextBlock>
+              In the <Text role="deletion">First</Text> Second Paragraph, Bottom
+              Text Stretches across both columns. Bottom Text Stretches across
+              both columns. Bottom Text Stretches across both columns. Bottom
+              Text Stretches across both columns. Bottom Text Stretches across
+              both columns. Bottom Text Stretches across both columns.
+            </TextBlock>
+          </TextContainer>
+        </BlockStack>
+      </Layout>
     </BlockStack>
   );
 }
