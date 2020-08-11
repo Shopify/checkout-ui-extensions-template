@@ -2,6 +2,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'prettier'],
   parser: '@typescript-eslint/parser',
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
