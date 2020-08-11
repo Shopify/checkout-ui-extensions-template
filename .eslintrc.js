@@ -1,3 +1,4 @@
+/* global module */
 module.exports = {
   plugins: ['react', '@typescript-eslint', 'prettier'],
   parser: '@typescript-eslint/parser',
