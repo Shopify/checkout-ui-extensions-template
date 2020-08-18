@@ -31,8 +31,8 @@
     "lint": "eslint 'src/**'"
   },
   "dependencies": {
-    "@shopify/argo-checkout": "^0.3.6",
-    "@shopify/argo-checkout-react": "^0.3.6",
+    "@shopify/argo-checkout": "^0.3.7",
+    "@shopify/argo-checkout-react": "^0.3.8",
     "react": "^16.13.0"
   }
 }
