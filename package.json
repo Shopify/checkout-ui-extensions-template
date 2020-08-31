@@ -8,7 +8,7 @@
   "author": "Shopify <app-extensions@shopify.com>",
   "license": "MIT",
   "devDependencies": {
-    "@shopify/argo-run": "^0.1.4",
+    "@shopify/argo-run": "^0.1.5",
     "@types/prettier": "^2.0.2",
     "@types/yargs": "^15.0.5",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
@@ -31,8 +31,8 @@
     "lint": "eslint 'src/**'"
   },
   "dependencies": {
-    "@shopify/argo-checkout": "^0.3.7",
-    "@shopify/argo-checkout-react": "^0.3.8",
+    "@shopify/argo-checkout": "^0.3.8",
+    "@shopify/argo-checkout-react": "^0.3.9",
     "react": "^16.13.0"
   }
 }
