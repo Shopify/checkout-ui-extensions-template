@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import * as fs from 'fs-extra';
 import * as path from 'path';
 import ts from 'typescript';
 import prettier from 'prettier';
@@ -25,7 +25,7 @@ const TEMPLATES = new Map([
 export function generateSrc(Template: Template) {
   const extension = CUSTOM_EXTENSIONS.get(Template) || '.js';
   try {
-    const outputDirectory = path.resolve(__dirname, '../../src');
+    const outputDirectory = path.resolve(getTargetRootDirectory(), 'src');
     if (!fs.existsSync(outputDirectory)) {
       fs.mkdirSync(outputDirectory);
     }
@@ -34,9 +34,11 @@ export function generateSrc(Template: Template) {
     const templateSource = getTemplateSrc(Template);
     fs.writeFileSync(outPath, templateSource);
 
-    console.log(`src/index${extension} file was created.`);
+    copyAdditionalFiles();
+
+    console.log(`Template was created. Start with src/index${extension}`);
   } catch (error) {
-    console.error(`src/index${extension} file could not be created: `, error);
+    console.error(`template could not be created: `, error);
   }
 }
 
@@ -64,10 +66,23 @@ function transpile(Template: Template) {
   return prettier.format(output.outputText, {...options, parser: 'typescript'});
 }
 
+function copyAdditionalFiles() {
+  const filesPath = path.join(getTemplateRootDirectory(), 'files');
+  fs.copySync(filesPath, getTargetRootDirectory());
+}
+
+function getTargetRootDirectory() {
+  return path.resolve(__dirname, '../../');
+}
+
+function getTemplateRootDirectory() {
+  return path.join(__dirname, 'templates');
+}
+
 function readTemplate(Template: Template) {
   return fs.readFileSync(
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    path.join(__dirname, 'templates', TEMPLATES.get(Template)!),
+    path.join(getTemplateRootDirectory(), TEMPLATES.get(Template)!),
     'utf8'
   );
 }
