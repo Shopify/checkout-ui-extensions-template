@@ -6,7 +6,6 @@
  *     completes
  */
 
-import React from 'react';
 import {
   extend,
   render,
@@ -111,14 +110,13 @@ export function App() {
                   This is a non-exhaustive example, demonstrating provided UI
                   components
                 </TextBlock>
-                <Heading>initialState</Heading>
-                <TextBlock>{JSON.stringify(initialState)}</TextBlock>
               </HeadingGroup>
             </HeadingGroup>
           </TextContainer>
           <Button
             onPress={() => {
-              console.log(`Extension point ${extensionPoint}`);
+              // eslint-disable-next-line no-console
+              console.log(`Extension point ${extensionPoint}`, initialState);
             }}
           >
             Log extension point to console

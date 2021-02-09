@@ -18,10 +18,11 @@ module.exports = {
   },
   settings: {
     react: {
-      version: 'detect',
+      version: '17.0',
     },
   },
   rules: {
+    'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
 };
