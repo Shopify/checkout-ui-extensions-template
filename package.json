@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@shopify/argo-checkout": "^0.9.0",
-    "@shopify/argo-checkout-react": "^0.9.0"
+    "@shopify/argo-checkout-react": "^0.9.0",
+    "react": "^17.0.0"
   }
 }
