@@ -21,7 +21,7 @@ npm run generate -- --type=CHECKOUT_POST_PURCHASE
 ## With yarn
 yarn
 
-yarn generate --type=CHECKOUT_POST_PURCHASE
+yarn generate --type=CHECKOUT_POST_PURCHASE --template=vanilla-typescript
 ```
 
 ### Available extensions
