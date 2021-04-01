@@ -1,9 +1,51 @@
 import yargs from 'yargs';
-import {generateSrc, Template} from './generate-src';
+import {
+  log,
+  generateSrc,
+  Template,
+  EXTENSION_TEMPLATE_MAP,
+} from './generate-src';
 import {cleanUp} from './clean-up';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const inquirer = require('inquirer');
+
+const NICE_TEMPLATE_NAME_MAP = new Map([
+  [Template.Vanilla, 'vanilla JavaScript'],
+  [Template.React, 'React'],
+  [Template.VanillaTypescript, 'TypeScript'],
+  [Template.ReactTypescript, 'React and TypeScript'],
+]);
+
+(async () => {
+  const {type: extensionType, template: templateIdentifier} = yargs.argv;
+
+  const type = validateExtensionType(extensionType);
+
+  const template = templateIdentifier
+    ? validateTemplateIdentifier(templateIdentifier as string)
+    : await getTemplateIdentifier();
+
+  log(
+    `Creating a ${EXTENSION_TEMPLATE_MAP.get(
+      type
+    )} extension using ${NICE_TEMPLATE_NAME_MAP.get(template)}`
+  );
+
+  generateSrc(type, template);
+  cleanUp();
+})();
+
+function validateExtensionType(extensionPoint?: unknown) {
+  if (
+    typeof extensionPoint === 'string' &&
+    EXTENSION_TEMPLATE_MAP.has(extensionPoint)
+  ) {
+    return extensionPoint;
+  }
+
+  throw new Error(`Unknown extension type: ${extensionPoint}`);
+}
 
 function validateTemplateIdentifier(templateIdentifier: string): Template {
   if (isTemplate(templateIdentifier)) {
@@ -39,27 +81,3 @@ async function getTemplateIdentifier() {
   const {template} = response;
   return template;
 }
-
-(async () => {
-  const {type: extensionPoint, template: templateIdentifier} = yargs.argv;
-  console.log('Create ', extensionPoint, ' extension project');
-  if (!extensionPoint) {
-    console.error(
-      `
-Warning: Unknown extension point ${extensionPoint}.
-Please use a supported extension type and generate your project manually.
-See README.md for instructions.
-      `
-    );
-    return;
-  }
-
-  const template = templateIdentifier
-    ? validateTemplateIdentifier(templateIdentifier as string)
-    : await getTemplateIdentifier();
-
-  console.log('✅ You selected:', template);
-
-  generateSrc(template as Template);
-  cleanUp();
-})();

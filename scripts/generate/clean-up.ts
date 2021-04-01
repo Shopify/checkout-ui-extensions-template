@@ -21,8 +21,6 @@ export function cleanUp() {
 
   try {
     fs.writeFileSync(packagePath, newPackage);
-
-    console.log('package.json updated.');
   } catch (error) {
     console.error(
       'Could not update package.json. You can manually update it by deleting the scripts.generate command.',
