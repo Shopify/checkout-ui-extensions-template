@@ -33,7 +33,7 @@ const NICE_TEMPLATE_NAME_MAP = new Map([
   );
 
   generateSrc(type, template);
-  cleanUp();
+  cleanUp(type);
 })();
 
 function validateExtensionType(extensionPoint?: unknown) {

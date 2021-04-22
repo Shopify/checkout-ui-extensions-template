@@ -21,7 +21,7 @@ import {
   Text,
   TextBlock,
   TextContainer,
-} from '@shopify/argo-checkout-react';
+} from '@shopify/argo-post-purchase-react';
 
 /** Define any shape or type of data */
 interface InitialState {

@@ -19,7 +19,7 @@ import {
   TextBlock,
   TextContainer,
   CalloutBanner,
-} from '@shopify/argo-checkout';
+} from '@shopify/argo-post-purchase';
 
 /** Define any shape or type of data */
 interface InitialState {
