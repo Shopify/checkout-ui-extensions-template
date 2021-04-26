@@ -1136,10 +1136,10 @@
   dependencies:
     "@remote-ui/core" "^2.0.0"
 
-"@shopify/argo-run@^0.3.6":
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-run/-/argo-run-0.3.6.tgz#2841e6346e8f86c6dfe3263736896165d6fe9337"
-  integrity sha512-O40i5CAbaIrHNeHAePkPnIjnhfPHI+fHO6Ufw3cv72wC0S8ZpOSiNlWAIyG4otrxYKWMvbDZ9dX4jU9irYDzSw==
+"@shopify/argo-run@^0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@shopify/argo-run/-/argo-run-0.3.7.tgz#366dcc881a8b7e774edaea89a3711b7a37143bab"
+  integrity sha512-1xsgIk2QmcV5p/nq+vLW3tF6iVROAjEWUK1IDDGKbYf+t+AjX0VAVQ2SRHCp9eTezsyNST050ZWIJxjjblFnkg==
   dependencies:
     "@babel/core" "^7.12.0"
     "@babel/plugin-proposal-class-properties" "^7.12.0"

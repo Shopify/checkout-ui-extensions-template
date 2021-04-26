@@ -8,7 +8,7 @@
   "author": "Shopify <app-extensions@shopify.com>",
   "license": "MIT",
   "devDependencies": {
-    "@shopify/argo-run": "^0.3.6",
+    "@shopify/argo-run": "^0.3.7",
     "@types/prettier": "^2.1.5",
     "@types/yargs": "^15.0.9",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
