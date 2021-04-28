@@ -29,7 +29,7 @@
     "generate": "ts-node ./scripts/generate",
     "build": "argo-run build",
     "server": "yarn start",
-    "start": "argo-run serve --port 39351",
+    "start": "argo-run serve",
     "lint": "eslint 'src/**'",
     "type-check": "tsc --pretty"
   },
