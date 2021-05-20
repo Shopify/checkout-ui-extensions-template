@@ -10,6 +10,7 @@ export function cleanUp(type: string) {
   delete json.scripts.generate;
   delete json.scripts['clean-up'];
   delete json.devDependencies['@types/yargs'];
+  delete json.devDependencies['@types/fs-extra'];
   delete json.devDependencies['fs-extra'];
   delete json.devDependencies['inquirer'];
   delete json.devDependencies['ts-node'];
