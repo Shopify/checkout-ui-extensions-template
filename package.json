@@ -8,7 +8,7 @@
   "author": "Shopify <app-extensions@shopify.com>",
   "license": "MIT",
   "devDependencies": {
-    "@shopify/argo-run": "^0.3.9",
+    "@shopify/argo-run": "^0.4.0",
     "@types/fs-extra": "^9.0.11",
     "@types/prettier": "^2.1.5",
     "@types/yargs": "^15.0.9",
