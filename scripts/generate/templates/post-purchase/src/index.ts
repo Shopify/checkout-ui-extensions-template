@@ -11,14 +11,12 @@ import {
   BlockStack,
   Button,
   Heading,
-  HeadingGroup,
   Image,
   Layout,
-  Separator,
-  Text,
   TextBlock,
   TextContainer,
   CalloutBanner,
+  View,
 } from '@shopify/argo-post-purchase';
 
 /** Define any shape or type of data */
@@ -34,24 +32,23 @@ interface InitialState {
  * extension point.
  */
 extend('Checkout::PostPurchase::ShouldRender', async ({storage}) => {
-  const {render, initialState} = await getRenderData();
+  const initialState = await getRenderData();
+  const render = true;
+
   if (render) {
-    // Saves payload data, provided to `Render` via `storage.initialData`
+    // Saves initial state, provided to `Render` via `storage.initialData`
     await storage.update(initialState);
   }
+
   return {
     render,
   };
 });
 
 // Simulate results of network call, etc.
-async function getRenderData() {
-  const initialState: InitialState = {
-    couldBe: 'anything',
-  };
+async function getRenderData(): Promise<InitialState> {
   return {
-    render: true,
-    initialState,
+    couldBe: 'anything',
   };
 }
 
@@ -66,92 +63,53 @@ extend('Checkout::PostPurchase::Render', (root, {extensionPoint, storage}) => {
   const initialState = storage.initialData as InitialState;
 
   root.appendChild(
-    root.createComponent(BlockStack, {}, [
+    root.createComponent(BlockStack, {spacing: 'loose'}, [
       root.createComponent(
         CalloutBanner,
-        {
-          title: `The body of this page was rendered by ${extensionPoint}`,
-        },
-        'subtext'
+        {title: 'Post-purchase extension template'},
+        'Use this template as a starting point to build a great post-purchase extension.'
       ),
-      /* <Layout />
-       * `500` represents `500px`
-       * `0.5` represents `50%`
-       * `1` represents `100%` */
       root.createComponent(
         Layout,
         {
+          maxInlineSize: 0.95,
           media: [
-            {viewportSize: 'small', sizes: [1, 1], maxInlineSize: 0.95},
-            {viewportSize: 'medium', sizes: [300, 0.5], maxInlineSize: 0.95},
-            {viewportSize: 'large', sizes: [300, 0.3], maxInlineSize: 0.95},
+            {viewportSize: 'small', sizes: [1, 30, 1]},
+            {viewportSize: 'medium', sizes: [300, 30, 0.5]},
+            {viewportSize: 'large', sizes: [400, 30, 0.33]},
           ],
         },
         [
-          root.createComponent(BlockStack, {}, [
-            root.createComponent(Heading, {}, 'Left Column'),
+          root.createComponent(View, {}, [
             root.createComponent(Image, {
               source:
-                'https://cdn.shopify.com/assets/images/logos/shopify-bag.png',
+                'https://cdn.shopify.com/static/images/examples/img-placeholder-1120x1120.png',
             }),
           ]),
-          root.createComponent(BlockStack, {}, [
+          root.createComponent(View),
+          root.createComponent(BlockStack, {spacing: 'xloose'}, [
             root.createComponent(TextContainer, {}, [
-              root.createComponent(Heading, {}, 'Right Column'),
-              root.createComponent(HeadingGroup, {}, [
-                root.createComponent(Heading, {}, 'My Post-Purchase Extension'),
-                root.createComponent(
-                  TextBlock,
-                  {},
-                  'It could be a cross-sell extension, product review for past purchases, request for more information from the buyer, or anything else'
-                ),
-                root.createComponent(HeadingGroup, {}, [
-                  root.createComponent(Heading, {}, 'Description'),
-                  root.createComponent(
-                    TextBlock,
-                    {},
-                    'This is a non-exhaustive example, demonstrating provided UI components'
-                  ),
-                ]),
-              ]),
+              root.createComponent(Heading, {}, 'Post-purchase extension'),
+              root.createComponent(
+                TextBlock,
+                {},
+                'Here you can cross-sell other products, request a product review based on a previous purchase, and much more.'
+              ),
             ]),
             root.createComponent(
               Button,
               {
+                submit: true,
                 onPress: () => {
-                  // eslint-disable-next-line no-console
-                  console.log(
-                    `Extension point ${extensionPoint}`,
-                    initialState
-                  );
+                  // eslint-disable-next-line
+                  console.log(`Extension point ${extensionPoint}`, initialState);
                 },
               },
-              'Log extension point to console'
+              'Primary button'
             ),
           ]),
         ]
       ),
-      root.createComponent(Layout, {maxInlineSize: 0.8}, [
-        root.createComponent(BlockStack, {}, [
-          root.createComponent(Separator),
-          root.createComponent(
-            TextContainer,
-            {spacing: 'loose', alignment: 'center'},
-            [
-              root.createComponent(TextBlock, {}, [
-                'Bottom Text ',
-                root.createComponent(Text, {emphasized: true}, 'Stretches'),
-                ' across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns.',
-              ]),
-              root.createComponent(TextBlock, {}, [
-                'In the ',
-                root.createComponent(Text, {role: 'deletion'}, 'First'),
-                ' Second Paragraph, Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns. Bottom Text Stretches across both columns.',
-              ]),
-            ]
-          ),
-        ]),
-      ]),
     ])
   );
 

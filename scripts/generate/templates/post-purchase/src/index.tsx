@@ -1,7 +1,9 @@
 /**
- * Extend Shopify Checkout with a custom Post Purchase user experience This
- * Shopify Checkout template provides two extension points:
- *  1. ShouldRender - Called first, during the checkout process.
+ * Extend Shopify Checkout with a custom Post Purchase user experience.
+ * This template provides two extension points:
+ *
+ *  1. ShouldRender - Called first, during the checkout process, when the
+ *     payment page loads.
  *  2. Render - If requested by `ShouldRender`, will be rendered after checkout
  *     completes
  */
@@ -14,13 +16,11 @@ import {
   Button,
   CalloutBanner,
   Heading,
-  HeadingGroup,
   Image,
   Layout,
-  Separator,
-  Text,
   TextBlock,
   TextContainer,
+  View,
 } from '@shopify/argo-post-purchase-react';
 
 /** Define any shape or type of data */
@@ -36,24 +36,23 @@ interface InitialState {
  * extension point.
  */
 extend('Checkout::PostPurchase::ShouldRender', async ({storage}) => {
-  const {render, initialState} = await getRenderData();
+  const initialState = await getRenderData();
+  const render = true;
+
   if (render) {
     // Saves initial state, provided to `Render` via `storage.initialData`
     await storage.update(initialState);
   }
+
   return {
     render,
   };
 });
 
 // Simulate results of network call, etc.
-async function getRenderData() {
-  const initialState: InitialState = {
-    couldBe: 'anything',
-  };
+async function getRenderData(): Promise<InitialState> {
   return {
-    render: true,
-    initialState,
+    couldBe: 'anything',
   };
 }
 
@@ -72,76 +71,42 @@ export function App() {
     'Checkout::PostPurchase::Render'
   >();
   const initialState = storage.initialData as InitialState;
+
   return (
-    <BlockStack>
-      <CalloutBanner
-        title={`The body of this page was rendered by ${extensionPoint}`}
-      >
-        subtext
+    <BlockStack spacing="loose">
+      <CalloutBanner title="Post-purchase extension template">
+        Use this template as a starting point to build a great post-purchase
+        extension.
       </CalloutBanner>
-      {/* <Layout />
-       * `500` represents `500px`
-       * `0.5` represents `50%`
-       * `1` represents `100%` */}
       <Layout
+        maxInlineSize={0.95}
         media={[
-          {viewportSize: 'small', sizes: [1, 1], maxInlineSize: 0.95},
-          {viewportSize: 'medium', sizes: [300, 0.5], maxInlineSize: 0.95},
-          {viewportSize: 'large', sizes: [300, 0.3], maxInlineSize: 0.95},
+          {viewportSize: 'small', sizes: [1, 30, 1]},
+          {viewportSize: 'medium', sizes: [300, 30, 0.5]},
+          {viewportSize: 'large', sizes: [400, 30, 0.33]},
         ]}
       >
-        <BlockStack>
-          <Heading>Left Column</Heading>
-          <Image source="https://cdn.shopify.com/assets/images/logos/shopify-bag.png" />
-        </BlockStack>
-        <BlockStack alignment="leading">
+        <View>
+          <Image source="https://cdn.shopify.com/static/images/examples/img-placeholder-1120x1120.png" />
+        </View>
+        <View />
+        <BlockStack spacing="xloose">
           <TextContainer>
-            <Heading>Right Column</Heading>
-            <HeadingGroup>
-              <Heading>My Post-Purchase Extension</Heading>
-              <TextBlock>
-                It could be a cross-sell extension, product review for past
-                purchases, request for more information from the buyer, or
-                anything else
-              </TextBlock>
-              <HeadingGroup>
-                <Heading>Description</Heading>
-                <TextBlock>
-                  This is a non-exhaustive example, demonstrating provided UI
-                  components
-                </TextBlock>
-              </HeadingGroup>
-            </HeadingGroup>
+            <Heading>Post-purchase extension</Heading>
+            <TextBlock>
+              Here you can cross-sell other products, request a product review
+              based on a previous purchase, and much more.
+            </TextBlock>
           </TextContainer>
           <Button
+            submit
             onPress={() => {
               // eslint-disable-next-line no-console
               console.log(`Extension point ${extensionPoint}`, initialState);
             }}
           >
-            Log extension point to console
+            Primary button
           </Button>
-        </BlockStack>
-      </Layout>
-      <Layout maxInlineSize={0.8}>
-        <BlockStack>
-          <Separator />
-          <TextContainer spacing="loose" alignment="center">
-            <TextBlock>
-              Bottom Text <Text emphasized>Stretches </Text>
-              across both columns. Bottom Text Stretches across both columns.
-              Bottom Text Stretches across both columns. Bottom Text Stretches
-              across both columns. Bottom Text Stretches across both columns.
-              Bottom Text Stretches across both columns.
-            </TextBlock>
-            <TextBlock>
-              In the <Text role="deletion">First</Text> Second Paragraph, Bottom
-              Text Stretches across both columns. Bottom Text Stretches across
-              both columns. Bottom Text Stretches across both columns. Bottom
-              Text Stretches across both columns. Bottom Text Stretches across
-              both columns. Bottom Text Stretches across both columns.
-            </TextBlock>
-          </TextContainer>
         </BlockStack>
       </Layout>
     </BlockStack>
