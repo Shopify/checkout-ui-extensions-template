@@ -1,14 +1,14 @@
 {
-  "name": "argo-checkout-template",
+  "name": "checkout-ui-extensions-template",
   "version": "0.1.0",
   "engines": {
     "node": ">=10.16.0"
   },
-  "repository": "https://github.com/Shopify/argo-checkout-template.git",
+  "repository": "https://github.com/Shopify/checkout-ui-extensions-template.git",
   "author": "Shopify <app-extensions@shopify.com>",
   "license": "MIT",
   "devDependencies": {
-    "@shopify/argo-run": "^0.4.0",
+    "@shopify/checkout-ui-extensions-run": "^0.4.0",
     "@types/fs-extra": "^9.0.11",
     "@types/prettier": "^2.1.5",
     "@types/yargs": "^15.0.9",
@@ -27,17 +27,17 @@
   },
   "scripts": {
     "generate": "ts-node ./scripts/generate",
-    "build": "argo-run build",
+    "build": "checkout-ui-extensions-run build",
     "server": "yarn start",
-    "start": "argo-run serve",
+    "start": "checkout-ui-extensions-run serve",
     "lint": "eslint 'src/**'",
     "type-check": "tsc --pretty"
   },
   "dependencies": {
-    "@shopify/argo-checkout": "^0.10.2",
-    "@shopify/argo-checkout-react": "^0.10.2",
-    "@shopify/argo-post-purchase": "^0.9.2",
-    "@shopify/argo-post-purchase-react": "^0.9.4",
+    "@shopify/checkout-ui-extensions": "^0.10.2",
+    "@shopify/checkout-ui-extensions-react": "^0.10.2",
+    "@shopify/post-purchase-ui-extensions": "^0.9.2",
+    "@shopify/post-purchase-ui-extensions-react": "^0.9.4",
     "react": "^17.0.0"
   }
 }

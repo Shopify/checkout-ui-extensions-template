@@ -1,4 +1,4 @@
-import {extend, TextField, TextBlock, BlockStack} from '@shopify/argo-checkout';
+import {extend, TextField, TextBlock, BlockStack} from '@shopify/checkout-ui-extensions';
 
 extend('Checkout::Feature::Render', (root, {extensionPoint}) => {
   root.appendChild(

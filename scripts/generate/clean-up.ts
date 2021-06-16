@@ -17,11 +17,11 @@ export function cleanUp(type: string) {
   delete json.devDependencies['yargs'];
 
   if (type === 'CHECKOUT_ARGO_EXTENSION') {
-    delete json.dependencies['@shopify/argo-post-purchase'];
-    delete json.dependencies['@shopify/argo-post-purchase-react'];
+    delete json.dependencies['@shopify/post-purchase-ui-extensions'];
+    delete json.dependencies['@shopify/post-purchase-react'];
   } else {
-    delete json.dependencies['@shopify/argo-checkout'];
-    delete json.dependencies['@shopify/argo-checkout-react'];
+    delete json.dependencies['@shopify/checkout-ui-extensions'];
+    delete json.dependencies['@shopify/checkout-ui-extensions-react'];
   }
 
   const newPackage = JSON.stringify(json, null, 2);
