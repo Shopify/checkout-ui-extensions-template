@@ -21,7 +21,7 @@ import {
   TextBlock,
   TextContainer,
   View,
-} from '@shopify/argo-post-purchase-react';
+} from '@shopify/post-purchase-ui-extensions-react';
 
 /** Define any shape or type of data */
 interface InitialState {

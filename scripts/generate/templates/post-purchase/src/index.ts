@@ -17,7 +17,7 @@ import {
   TextContainer,
   CalloutBanner,
   View,
-} from '@shopify/argo-post-purchase';
+} from '@shopify/post-purchase-ui-extensions';
 
 /** Define any shape or type of data */
 interface InitialState {
