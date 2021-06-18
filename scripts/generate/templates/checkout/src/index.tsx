@@ -3,7 +3,7 @@ import {
   TextField,
   TextBlock,
   BlockStack,
-} from '@shopify/argo-checkout-react';
+} from '@shopify/checkout-ui-extensions-react';
 
 render('Checkout::Feature::Render', ({extensionPoint}) => (
   <App extensionPoint={extensionPoint} />
