@@ -969,43 +969,20 @@
   dependencies:
     "@remote-ui/rpc" "^1.0.17"
 
-"@shopify/argo-checkout-react@^0.10.2":
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout-react/-/argo-checkout-react-0.10.2.tgz#516ef1e92f5c58e59e1f622270e839301daeb1a7"
-  integrity sha512-+ckgznRoGknDX6LnihBw3+ZjETzB9tTGJiYx1HatU4ydluLgMEd6jMAGoByohBmw3755/YqzIDxYD4xLl3c3pQ==
+"@shopify/checkout-ui-extensions-react@0.11.0-alpha.0":
+  version "0.11.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@shopify/checkout-ui-extensions-react/-/checkout-ui-extensions-react-0.11.0-alpha.0.tgz#2070c18427d2936562b37601c7b79699e3b6cbfd"
+  integrity sha512-yXgw4AA0/UVq1UZoaOTO8o06kdVsIQtKudcLgDyjuTsLCJqvWsMOPtdyqD7FW5FLuUB+gMedPIyqU3uQoVOE+w==
   dependencies:
     "@remote-ui/async-subscription" "^2.0.0"
     "@remote-ui/react" "^4.0.1"
-    "@shopify/argo-checkout" "^0.10.2"
+    "@shopify/checkout-ui-extensions" "^0.11.0-alpha.0"
     "@types/react" "^17.0.0"
 
-"@shopify/argo-checkout@^0.10.2":
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-checkout/-/argo-checkout-0.10.2.tgz#88de1f6354490f90ab3b3c422af30a9d20ef45db"
-  integrity sha512-Jcoss4bHpsANXB7ESgMSr6JoiCNHcV72/LzJHC9sGppdT+tzzNP35J0KlGJNFZiAIXbwdbSBiYy7pvH9zV0sVg==
-  dependencies:
-    "@remote-ui/core" "^2.0.1"
-
-"@shopify/argo-post-purchase-react@^0.9.4":
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-post-purchase-react/-/argo-post-purchase-react-0.9.4.tgz#494c272fb248cc0e229cc762ffca5567cd43908a"
-  integrity sha512-ScRTDCgaWnfzW7dOmK7ULddqG8lQwx3oYUG9WDw+SBLmvV16cjh0uE8YQKmUFiBq8v9Xqf95yFH/dtGhV0uJkA==
-  dependencies:
-    "@remote-ui/react" "^4.0.0"
-    "@shopify/argo-post-purchase" "^0.9.2"
-    "@types/react" "^17.0.0"
-
-"@shopify/argo-post-purchase@^0.9.2":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-post-purchase/-/argo-post-purchase-0.9.2.tgz#c561af3c26c59ac902c4c177bfd18f4d5446e8f2"
-  integrity sha512-hn2gJaD9hy1rxoXALb4xh35lljekg/BjgtFGZmdOVdq/OlDe035NePkKmeC3WtP/yLeyvA5/JvBu5tFtLs+rPg==
-  dependencies:
-    "@remote-ui/core" "^2.0.0"
-
-"@shopify/argo-run@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-run/-/argo-run-0.4.0.tgz#34f016e15bb753379f5bd9056c568847e1a51603"
-  integrity sha512-ZluNeZCYYo6hxg5b9qho3X3IQMz0Tnvf7QzBwJRSVjM094Dvp5hCkvxwiJvat0Rc9Wn/PFHPrHINuhbv4zdkpg==
+"@shopify/checkout-ui-extensions-run@0.5.0-alpha.0":
+  version "0.5.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@shopify/checkout-ui-extensions-run/-/checkout-ui-extensions-run-0.5.0-alpha.0.tgz#9ba6535361d0ba50c475380aee4a3d68bab47b9d"
+  integrity sha512-06whv5xpMCz776/eMgtzGaJDvmFYtoepd5cFXHubTpMWTXPTM2mjsrnnYjiaCsk4bb8MtBtdrZa+c+oUqfZFfQ==
   dependencies:
     "@babel/core" "^7.12.0"
     "@babel/plugin-proposal-class-properties" "^7.12.0"
@@ -1015,7 +992,7 @@
     "@babel/preset-env" "^7.12.0"
     "@babel/preset-react" "^7.12.0"
     "@babel/preset-typescript" "^7.12.0"
-    "@shopify/argo-webpack-hot-client" "^0.1.6"
+    "@shopify/ui-extensions-webpack-hot-client" "^0.2.0-alpha.0"
     babel-loader "^8.2.0"
     brotli-size "^4.0.0"
     camelcase-keys "^6.0.0"
@@ -1032,10 +1009,33 @@
     webpack "^4.43.0"
     webpack-dev-server "^3.11.0"
 
-"@shopify/argo-webpack-hot-client@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@shopify/argo-webpack-hot-client/-/argo-webpack-hot-client-0.1.6.tgz#57358932e2009ff7ecd5b431aa0c722bf3871871"
-  integrity sha512-E10eMYuMyZjDyN3bSDFVbu7IFYvrBSc70EmkFyqbxHnzNDXjCHCRp/U0O3JooAWWJy1Qe8lPzQ9wS9gGpmdcaw==
+"@shopify/checkout-ui-extensions@0.11.0-alpha.0", "@shopify/checkout-ui-extensions@^0.11.0-alpha.0":
+  version "0.11.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@shopify/checkout-ui-extensions/-/checkout-ui-extensions-0.11.0-alpha.0.tgz#63bb5eeff14b92d7d844b1e480fe443bd1bd32a9"
+  integrity sha512-328JegzNw8m99uuqTDJ2JjU+UHs5qwKSsynQxfK7pWZodU5KbJ2eLTmndV8wkOMCkB8c2kQBDkTgTN3mvJaUvg==
+  dependencies:
+    "@remote-ui/core" "^2.0.1"
+
+"@shopify/post-purchase-ui-extensions-react@0.10.0-alpha.0":
+  version "0.10.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@shopify/post-purchase-ui-extensions-react/-/post-purchase-ui-extensions-react-0.10.0-alpha.0.tgz#c885cf066bf3364f8c062251d23033d99506e2cd"
+  integrity sha512-BCUDGZLzp+icd+QeFlA3ERX1T4CkKYpK3xXb4EpxT4jkXVK3D8b4SoSdBaTLPUoDedQTGI//9tJinmxYYUt/Vw==
+  dependencies:
+    "@remote-ui/react" "^4.0.0"
+    "@shopify/post-purchase-ui-extensions" "^0.10.0-alpha.0"
+    "@types/react" "^17.0.0"
+
+"@shopify/post-purchase-ui-extensions@0.10.0-alpha.0", "@shopify/post-purchase-ui-extensions@^0.10.0-alpha.0":
+  version "0.10.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@shopify/post-purchase-ui-extensions/-/post-purchase-ui-extensions-0.10.0-alpha.0.tgz#75a8009594292a886f78f957986027d9bd50744d"
+  integrity sha512-A1IRYXE0XREjVkOHuILgKt1jVjne9XEEIIbc7qpVw9xkQNfga748eT1obued9eDRXtRJ+bNPrKo5BbIAq0H+vQ==
+  dependencies:
+    "@remote-ui/core" "^2.0.0"
+
+"@shopify/ui-extensions-webpack-hot-client@^0.2.0-alpha.0":
+  version "0.2.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@shopify/ui-extensions-webpack-hot-client/-/ui-extensions-webpack-hot-client-0.2.0-alpha.0.tgz#a61c021ba618b8f208a4dae702981c1586db5d5a"
+  integrity sha512-vGVKxGmqormjd2x+mI3SasBXJ4GgJZU4OTfamVMBaDcoBquxRxyGEom2gygpShcqwqnCAocmwilgShuJXJ61oA==
   dependencies:
     webpack "^4.43.0"
 
