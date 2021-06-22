@@ -16,12 +16,12 @@ export function cleanUp(type: string) {
   delete json.devDependencies['ts-node'];
   delete json.devDependencies['yargs'];
 
-  if (type === 'CHECKOUT_ARGO_EXTENSION') {
-    delete json.dependencies['@shopify/post-purchase-ui-extensions'];
-    delete json.dependencies['@shopify/post-purchase-react'];
-  } else {
+  if (type === 'CHECKOUT_POST_PURCHASE') {
     delete json.dependencies['@shopify/checkout-ui-extensions'];
     delete json.dependencies['@shopify/checkout-ui-extensions-react'];
+  } else {
+    delete json.dependencies['@shopify/post-purchase-ui-extensions'];
+    delete json.dependencies['@shopify/post-purchase-ui-extensions--react'];
   }
 
   const newPackage = JSON.stringify(json, null, 2);
