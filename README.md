@@ -27,4 +27,4 @@ yarn generate --type=CHECKOUT_POST_PURCHASE --template=vanilla-typescript
 ### Available extensions
 
 - CHECKOUT_POST_PURCHASE
-- CHECKOUT_ARGO_EXTENSION
+- CHECKOUT_UI_EXTENSION
