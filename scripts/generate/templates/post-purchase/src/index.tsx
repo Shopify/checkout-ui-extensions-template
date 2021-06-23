@@ -59,7 +59,7 @@ async function getRenderData(): Promise<InitialState> {
 /**
  * Entry point for the `Render` Extension Point
  *
- * Returns markup composed of Argo components.  The Render extension can
+ * Returns markup composed of remote UI components.  The Render extension can
  * optionally make use of data stored during `ShouldRender` extension point to
  * expedite time-to-first-meaningful-paint.
  */
