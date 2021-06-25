@@ -21,7 +21,7 @@ export function cleanUp(type: string) {
     delete json.dependencies['@shopify/checkout-ui-extensions-react'];
   } else {
     delete json.dependencies['@shopify/post-purchase-ui-extensions'];
-    delete json.dependencies['@shopify/post-purchase-ui-extensions--react'];
+    delete json.dependencies['@shopify/post-purchase-ui-extensions-react'];
   }
 
   const newPackage = JSON.stringify(json, null, 2);
