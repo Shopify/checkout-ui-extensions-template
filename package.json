@@ -8,7 +8,7 @@
   "author": "Shopify <app-extensions@shopify.com>",
   "license": "MIT",
   "devDependencies": {
-    "@shopify/checkout-ui-extensions-run": "0.5.0",
+    "@shopify/checkout-ui-extensions-run": "0.7.0",
     "@types/fs-extra": "^9.0.11",
     "@types/prettier": "^2.1.5",
     "@types/yargs": "^15.0.9",
@@ -34,10 +34,10 @@
     "type-check": "tsc --pretty"
   },
   "dependencies": {
-    "@shopify/checkout-ui-extensions": "0.11.0",
-    "@shopify/checkout-ui-extensions-react": "0.11.0",
-    "@shopify/post-purchase-ui-extensions": "0.10.0",
-    "@shopify/post-purchase-ui-extensions-react": "0.10.0",
+    "@shopify/checkout-ui-extensions": "0.12.0",
+    "@shopify/checkout-ui-extensions-react": "0.12.0",
+    "@shopify/post-purchase-ui-extensions": "0.10.1",
+    "@shopify/post-purchase-ui-extensions-react": "0.10.1",
     "react": "^17.0.0"
   }
 }
