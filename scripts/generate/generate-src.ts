@@ -24,7 +24,6 @@ const TEMPLATES = new Map([
 
 export const EXTENSION_TEMPLATE_MAP = new Map([
   ['CHECKOUT_POST_PURCHASE', 'post-purchase'],
-  ['CHECKOUT_ARGO_EXTENSION', 'checkout'],
   ['CHECKOUT_UI_EXTENSION', 'checkout'],
 ]);
 
