@@ -1182,19 +1182,19 @@
   dependencies:
     "@remote-ui/core" "^2.1.3"
 
-"@shopify/post-purchase-ui-extensions-react@0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@shopify/post-purchase-ui-extensions-react/-/post-purchase-ui-extensions-react-0.10.1.tgz#98e65a4290e148f54dddffe4ab43458de0c44293"
-  integrity sha512-6ZdGguZINKz1pZQuQSk4ltHkOO0keMIgNKWkdU4Lu5Bvm0tQiEFIp9bC6E/3wwcDo6YOZgky2L/dQYFMJq3ttQ==
+"@shopify/post-purchase-ui-extensions-react@0.13.2":
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/@shopify/post-purchase-ui-extensions-react/-/post-purchase-ui-extensions-react-0.13.2.tgz#ed40c4b1f0e17d948a7aede8085c256d0579917f"
+  integrity sha512-aJ5bwMlEUoBR6d1fRWkBUByVxXVpVNDIKeCClBUX7cD1kIrW2hqHRThjojqfdm4UNZKJbokHjIx81M3Th6Ksog==
   dependencies:
     "@remote-ui/react" "^4.1.3"
-    "@shopify/post-purchase-ui-extensions" "^0.10.1"
+    "@shopify/post-purchase-ui-extensions" "^0.13.2"
     "@types/react" ">=17.0.0 <18.0.0"
 
-"@shopify/post-purchase-ui-extensions@0.10.1", "@shopify/post-purchase-ui-extensions@^0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@shopify/post-purchase-ui-extensions/-/post-purchase-ui-extensions-0.10.1.tgz#0229b437bc16406d7bc73d803fad091274346934"
-  integrity sha512-K++cTp9iSp0FIkyUBkaYfjpiRsp6/M63KIpvODYzvsmPFRwPimdmRvKMIWvzp5FRmFE7Ma9mkrAQs9CxKYELEw==
+"@shopify/post-purchase-ui-extensions@0.13.2", "@shopify/post-purchase-ui-extensions@^0.13.2":
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/@shopify/post-purchase-ui-extensions/-/post-purchase-ui-extensions-0.13.2.tgz#860eb9f64086a3d1415d6c1e8d54d77137f1be06"
+  integrity sha512-7XGMBul2kI7K4UvmqSFnwzKEdVD6yH8bur08+KcD0Ukc/om0GWfZyVXadg8xOVi/nVp/ZxlRMQ3q/imuf4giag==
   dependencies:
     "@remote-ui/core" "^2.1.3"
 
