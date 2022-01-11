@@ -1146,10 +1146,10 @@
     "@shopify/checkout-ui-extensions" "^0.12.0"
     "@types/react" ">=17.0.0 <18.0.0"
 
-"@shopify/checkout-ui-extensions-run@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@shopify/checkout-ui-extensions-run/-/checkout-ui-extensions-run-0.7.0.tgz#b4e0c2036652f52d1e9d47c24479ea08beb3b296"
-  integrity sha512-BqosnPbXQ6Li/v5dB7k0ZVMHlLhJiX20DyazIHGcPFDLu7zrwDCxUNfT+T0kyxEjXyrV5sJlNUwUY7DiuZ4y3Q==
+"@shopify/checkout-ui-extensions-run@0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@shopify/checkout-ui-extensions-run/-/checkout-ui-extensions-run-0.7.1.tgz#336c297eed4d147a92ccf303c3daa549a2beae30"
+  integrity sha512-MdcI7nuNXY4vCOLWfLT55oxPZsm2jsFIlVsXWHScb5N4AQx2dY6LtXhAkX1wXUXbyr9MmAxo59FLOz7JxXvtEQ==
   dependencies:
     "@babel/core" "7.12.13"
     "@babel/plugin-proposal-class-properties" "7.12.13"
